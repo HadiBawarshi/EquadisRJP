@@ -1,0 +1,6 @@
+@EquadisRJP.Service_HostAddress = http://localhost:5023
+
+GET {{EquadisRJP.Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
