@@ -15,17 +15,17 @@ public partial class CommercialOffer : EntityBase
         SupplierId = supplierId;
     }
 
-    public string? Title { get; set; }
+    public string? Title { get; private set; }
 
     public DateTime? ValidFrom { get; private set; }
 
-    public DateTime? ValidTo { get; set; }
+    public DateTime? ValidTo { get; private set; }
 
-    public int? DiscountValuePercentage { get; set; }
+    public int? DiscountValuePercentage { get; private set; }
 
-    public int? SupplierId { get; set; }
+    public int? SupplierId { get; private set; }
 
-    public virtual Supplier? Supplier { get; set; }
+    public virtual Supplier? Supplier { get; private set; }
 
     public void SetValidityDate(DateTime from, DateTime to)
     {

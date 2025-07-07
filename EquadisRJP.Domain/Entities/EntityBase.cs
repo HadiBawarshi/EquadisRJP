@@ -1,7 +1,7 @@
 ﻿
 namespace EquadisRJP.Domain.Entities
 {
-    public class EntityBase : IEntityBase
+    public abstract class EntityBase : IEntityBase
     {
         //private readonly List<IDomainEvent> _domainEvents = [];
 
