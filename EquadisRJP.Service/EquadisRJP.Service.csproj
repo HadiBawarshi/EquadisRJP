@@ -23,4 +23,8 @@
     <ProjectReference Include="..\EquadisRJP.Infrastructure\EquadisRJP.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="_config\" />
+  </ItemGroup>
+
 </Project>
