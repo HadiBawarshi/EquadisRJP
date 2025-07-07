@@ -21,6 +21,11 @@ namespace EquadisRJP.Service.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            // Simulate a domain exception
+            //throw new PartnershipExpiredException("The partnership has expired.");
+
+            throw new Exception("Normal Exception");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
