@@ -17,19 +17,17 @@ namespace EquadisRJP.Identity
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("catalogapi"),
-                new ApiScope("catalogapi.read"),
-                new ApiScope("catalogapi.write"),
-                new ApiScope("EquadisRJPgateway")
+                new ApiScope("equadisrjpapi"),
+                //new ApiScope("EquadisRJPgateway")
             };
 
         public static IEnumerable<ApiResource> ApiResources =>
             new ApiResource[]
             {
-                //List of Microservices can go here.
-                new ApiResource("Catalog", "Catalog.API")
+                //List of Microservices.
+                new ApiResource("EquadisRJP", "EquadisRJP.API")
                 {
-                    Scopes = {"catalogapi.read", "catalogapi.write"}
+                    Scopes = { "equadisrjpapi"}
                 },
                
                 //new ApiResource("EquadisRJPGateway", "EquadisRJP Gateway")
@@ -45,11 +43,11 @@ namespace EquadisRJP.Identity
                 //m2m flow 
                 new Client
                 {
-                    ClientName = "Catalog API Client",
-                    ClientId = "CatalogApiClient",
+                    ClientName = "EquadisRJP API Client",
+                    ClientId = "EquadisRJPApiClient",
                     ClientSecrets = {new Secret("5c6eb3b4-61a7-4668-ac57-2b4591ec26d2".Sha256())},
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = {"catalogapi.read", "catalogapi.write"}
+                    AllowedScopes = { "equadisrjpapi" }
                 },
 
 
