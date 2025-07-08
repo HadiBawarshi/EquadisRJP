@@ -11,6 +11,8 @@ namespace EquadisRJP.Infrastructure
         {
             services.AddDbContext<EquadisRJPDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+
         }
     }
 }
