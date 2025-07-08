@@ -1,32 +1,66 @@
 using EquadisRJP.Application;
 using EquadisRJP.Infrastructure;
 using EquadisRJP.Service.Middlewares;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
+using NLog;
+using NLog.Web;
 
 
-builder.Services.AddApplicationServices();
+var logger = LogManager.Setup()
+    .LoadConfigurationFromAppSettings()
+    .GetCurrentClassLogger();
 
-builder.Services.AddInfrastructureServices(builder.Configuration);
+try
+{
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Remove default logging
+    builder.Logging.ClearProviders();
+    //In dev use trace
+    builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+    //In prod
+    //builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Information);
+
+    builder.Host.UseNLog(); // Register NLog
 
 
-var app = builder.Build();
+
+    // Add services to the container.
+
+    builder.Services.AddControllers();
 
 
-//Exception handling middleware
-app.UseMiddleware<ExceptionHandlingMiddleware>();
+    builder.Services.AddApplicationServices();
+
+    builder.Services.AddInfrastructureServices(builder.Configuration);
 
 
-// Configure the HTTP request pipeline.
+    var app = builder.Build();
 
-app.UseHttpsRedirection();
 
-app.UseAuthorization();
+    //Exception handling middleware
+    app.UseMiddleware<ExceptionHandlingMiddleware>();
 
-app.MapControllers();
 
-app.Run();
+    // Configure the HTTP request pipeline.
+
+    app.UseHttpsRedirection();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    logger.Error(ex, "Stopped due to an exception during startup.");
+    throw;
+}
+finally
+{
+    LogManager.Shutdown(); // Flush and stop NLog
+
+}
+
+
