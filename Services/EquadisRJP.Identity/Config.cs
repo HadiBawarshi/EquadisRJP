@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-using IdentityServer4;
 using IdentityServer4.Models;
 
 namespace EquadisRJP.Identity
@@ -19,7 +18,6 @@ namespace EquadisRJP.Identity
             new ApiScope[]
             {
                 new ApiScope("catalogapi"),
-                new ApiScope("basketapi"),
                 new ApiScope("catalogapi.read"),
                 new ApiScope("catalogapi.write"),
                 new ApiScope("EquadisRJPgateway")
@@ -33,18 +31,12 @@ namespace EquadisRJP.Identity
                 {
                     Scopes = {"catalogapi.read", "catalogapi.write"}
                 },
-                new ApiResource("Basket", "Basket.API")
-                {
-                    Scopes = {"basketapi"}
-                },
-                new ApiResource("EquadisRJPGateway", "EquadisRJP Gateway")
-                {
-                    Scopes = {"EquadisRJPgateway", "basketapi"}
-                },
-                new ApiResource("EquadisRJPAngular", "EquadisRJP Angular")
-                {
-                    Scopes = {"EquadisRJPgateway", "catalogapi.read", "catalogapi.write", "basketapi", "catalogapi.read"}
-                }
+               
+                //new ApiResource("EquadisRJPGateway", "EquadisRJP Gateway")
+                //{
+                //    Scopes = {"EquadisRJPgateway", "basketapi"}
+                //},
+                
             };
 
         public static IEnumerable<Client> Clients =>
@@ -59,62 +51,17 @@ namespace EquadisRJP.Identity
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowedScopes = {"catalogapi.read", "catalogapi.write"}
                 },
-                new Client
-                {
-                    ClientName = "Basket API Client",
-                    ClientId = "BasketApiClient",
-                    ClientSecrets = {new Secret("5c6ec4c5-61a7-4668-ac57-2b4591ec26d2".Sha256())},
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = {"basketapi"}
-                },
 
-                new Client
-                {
-                    ClientName = "EquadisRJP Gateway Client",
-                    ClientId = "EquadisRJPGatewayClient",
-                    ClientSecrets = {new Secret("5c7fd5c5-61a7-4668-ac57-2b4591ec26d2".Sha256())},
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = {"EquadisRJPgateway", "basketapi"}
-                },
-                new Client
-                {
-                    ClientName = "Angular-Client",
-                    ClientId = "angular-client",
-                    AllowedGrantTypes = GrantTypes.Code,
 
-                    RedirectUris = new List<string>
-                        {
-                            "http://localhost:4200/signin-callback",
-                            "http://localhost:4200/assets/silent-callback.html",
-                            "https://localhost:9009/signin-oidc"
-                        },
-                    RequirePkce = true,
-                    AllowAccessTokensViaBrowser = true,
-                    Enabled = true,
-                    UpdateAccessTokenClaimsOnRefresh = true,
+                //new Client
+                //{
+                //    ClientName = "EquadisRJP Gateway Client",
+                //    ClientId = "EquadisRJPGatewayClient",
+                //    ClientSecrets = {new Secret("5c7fd5c5-61a7-4668-ac57-2b4591ec26d2".Sha256())},
+                //    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                //    AllowedScopes = {"EquadisRJPgateway", "basketapi"}
+                //},
 
-                    AllowedScopes =
-                    {
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        "EquadisRJPgateway"
-                    },
-                    AllowedCorsOrigins = {"http://localhost:4200"},
-                    RequireClientSecret = false,
-                    AllowRememberConsent = false,
-                    //PostLogoutRedirectUris = new List<string> {"http://localhost:4200/signout-callback"},
-                    RequireConsent = false,
-                    AccessTokenLifetime = 3600,
-                    PostLogoutRedirectUris = new List<string>
-                    {
-                        "http://localhost:4200/signout-callback",
-                        "https://localhost:9009/signout-callback-oidc"
-                    },
-                    ClientSecrets = new List<Secret>
-                    {
-                        new Secret("5c6eb3b4-61a7-4668-ac57-2b4591ec26d2".Sha256())
-                    }
-                }
             };
     };
 }

@@ -1,7 +1,7 @@
-using EquadisRJP.Application;
-using EquadisRJP.Infrastructure;
+using EquadisRJP.Application.Extensions;
+using EquadisRJP.Infrastructure.Extensions;
+using EquadisRJP.Service.Extensions;
 using EquadisRJP.Service.Middlewares;
-using Microsoft.OpenApi.Models;
 using NLog;
 using NLog.Web;
 
@@ -17,14 +17,14 @@ try
 
     // Remove default logging
     builder.Logging.ClearProviders();
+
     //In dev use trace
     builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+
     //In prod
     //builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Information);
 
     builder.Host.UseNLog(); // Register NLog
-
-
 
     // Add services to the container.
 
@@ -37,10 +37,9 @@ try
 
     builder.Services.AddInfrastructureServices(builder.Configuration);
 
-    builder.Services.AddSwaggerGen(c =>
-    {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "EquadisRJP.API", Version = "v1" });
-    });
+    builder.Services.AddSwaggerConfigurations(builder.Configuration);
+
+    builder.Services.AddJWTAuthentication(builder.Configuration);
 
 
     var app = builder.Build();

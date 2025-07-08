@@ -1,4 +1,4 @@
-﻿namespace EquadisRJP.Application
+﻿namespace EquadisRJP.Application.Extensions
 {
     public class ApplicationAssemblyReference
     {

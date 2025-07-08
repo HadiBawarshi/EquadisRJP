@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace EquadisRJP.Application
+namespace EquadisRJP.Application.Extensions
 {
     public static class ServiceCollectionExtensions
     {
