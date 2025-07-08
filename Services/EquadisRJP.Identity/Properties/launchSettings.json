@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "EquadisRJP.Identity": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      //"applicationUrl": "https://localhost:54033;http://localhost:54034"
+      "applicationUrl": "https://localhost:9009"
+    }
+  }
+}
