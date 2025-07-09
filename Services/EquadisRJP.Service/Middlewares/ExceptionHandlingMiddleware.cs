@@ -1,5 +1,5 @@
-﻿using EquadisRJP.Domain.Errors;
-using EquadisRJP.Domain.Exceptions;
+﻿using EquadisRJP.Domain.DomainExceptions;
+using EquadisRJP.Domain.Errors;
 using EquadisRJP.Domain.Primitives;
 using System.Net;
 using System.Net.Mime;

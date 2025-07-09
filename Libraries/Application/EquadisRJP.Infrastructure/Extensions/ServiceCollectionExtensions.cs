@@ -1,4 +1,6 @@
-﻿using EquadisRJP.Infrastructure.Data;
+﻿using EquadisRJP.Domain.Repositories;
+using EquadisRJP.Infrastructure.Data;
+using EquadisRJP.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -14,6 +16,10 @@ namespace EquadisRJP.Infrastructure.Extensions
         {
             services.AddDbContext<EquadisRJPDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<EquadisRJPDbContext>());
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
+            services.AddScoped<ISupplierRepository, SupplierRepository>();
 
 
         }

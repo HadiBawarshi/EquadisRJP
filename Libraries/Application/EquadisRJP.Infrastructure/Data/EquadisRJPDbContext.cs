@@ -1,9 +1,10 @@
 ﻿using EquadisRJP.Domain.Entities;
+using EquadisRJP.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EquadisRJP.Infrastructure.Data;
 
-public partial class EquadisRJPDbContext : DbContext
+public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
 {
     public EquadisRJPDbContext()
     {
@@ -121,4 +122,6 @@ public partial class EquadisRJPDbContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default) => await base.SaveChangesAsync(cancellationToken);
 }
