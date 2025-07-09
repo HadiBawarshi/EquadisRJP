@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Identity\EquadisRJP.IdentityAuth.Public\EquadisRJP.IdentityAuth.Public.csproj" />
     <ProjectReference Include="..\EquadisRJP.Domain\EquadisRJP.Domain.csproj" />
   </ItemGroup>
 

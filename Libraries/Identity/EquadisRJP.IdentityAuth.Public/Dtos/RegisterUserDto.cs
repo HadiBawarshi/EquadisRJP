@@ -1,4 +1,4 @@
-﻿namespace EquadisRJP.IdentityAuth.Models.Dtos
+﻿namespace EquadisRJP.IdentityAuth.Public.Dtos
 {
     public class RegisterUserDto
     {

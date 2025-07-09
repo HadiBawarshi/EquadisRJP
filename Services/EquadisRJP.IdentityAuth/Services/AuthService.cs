@@ -2,6 +2,7 @@
 using EquadisRJP.IdentityAuth.Data;
 using EquadisRJP.IdentityAuth.Models.Dtos;
 using EquadisRJP.IdentityAuth.Models.Responses;
+using EquadisRJP.IdentityAuth.Public.Dtos;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;

@@ -1,5 +1,6 @@
 ﻿using EquadisRJP.IdentityAuth.Models.Dtos;
 using EquadisRJP.IdentityAuth.Models.Responses;
+using EquadisRJP.IdentityAuth.Public.Dtos;
 
 namespace EquadisRJP.IdentityAuth.Services
 {
