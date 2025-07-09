@@ -1,0 +1,6 @@
+@EquadisRJP.IdentityAuth_HostAddress = http://localhost:5029
+
+GET {{EquadisRJP.IdentityAuth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
