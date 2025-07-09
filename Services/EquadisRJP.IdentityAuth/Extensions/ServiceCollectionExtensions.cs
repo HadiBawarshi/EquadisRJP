@@ -1,4 +1,5 @@
 ﻿using EquadisRJP.IdentityAuth.Data;
+using EquadisRJP.IdentityAuth.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -46,9 +47,15 @@ namespace EquadisRJP.IdentityAuth.Extensions
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = configuration["JwtSettings:Issuer"],
                     ValidAudience = configuration["JwtSettings:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"] ?? string.Empty))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"] ?? string.Empty)),
+
                 };
             });
+        }
+
+        public static void AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<IAuthService, AuthService>();
         }
     }
 }

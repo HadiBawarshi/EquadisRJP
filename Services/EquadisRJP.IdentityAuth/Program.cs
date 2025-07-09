@@ -1,4 +1,5 @@
 using EquadisRJP.IdentityAuth.Extensions;
+using EquadisRJP.IdentityAuth.Models.Dtos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddIdentityDbContext(builder.Configuration);
 
 builder.Services.AddJWTAuthentication(builder.Configuration);
+
+builder.Services.Configure<List<AuthClientModel>>(
+    builder.Configuration.GetSection("AuthClients"));
+
+builder.Services.AddServices();
 
 var app = builder.Build();
 
