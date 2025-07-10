@@ -7,17 +7,18 @@ using System.Net;
 namespace EquadisRJP.Service.Controllers
 {
 
-    public class SupplierController : ApiBaseController
+    public class RetailerController : ApiBaseController
     {
-        public SupplierController(IMediator mediator) : base(mediator)
+        public RetailerController(IMediator mediator) : base(mediator)
         {
         }
 
 
+
         [Authorize(Roles = "Admin")]
-        [HttpPost(Name = "CreateSupplier")]
+        [HttpPost(Name = "CreateRetailer")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> CreateSupplier([FromForm] CreateSupplierCommand command)
+        public async Task<IActionResult> CreateRetailer([FromForm] CreateRetailerCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);

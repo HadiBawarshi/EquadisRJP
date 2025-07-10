@@ -4,6 +4,7 @@ using EquadisRJP.Domain.Entities;
 using EquadisRJP.Domain.Errors;
 using EquadisRJP.Domain.Primitives;
 using EquadisRJP.Domain.Repositories;
+using EquadisRJP.IdentityAuth.Public.Constants;
 using EquadisRJP.IdentityAuth.Public.Dtos;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -29,12 +30,12 @@ namespace EquadisRJP.Application.Handlers
         {
             // 1. Register Identity user
             var reg = await _auth.RegisterAsync(
-                new RegisterUserDto(rq.CompanyName, rq.Username, rq.Email, rq.Password, rq.PhoneNumber, "Supplier"), ct);
+                new RegisterUserDto(rq.CompanyName, rq.Username, rq.Email, rq.Password, rq.PhoneNumber, IdentityRoles.Supplier), ct);
 
             if (!reg.Success || string.IsNullOrWhiteSpace(reg.UserId))
                 return Result.Failure(DomainErrors.Supplier.CreationFailed);
 
-            // 2. Create supplier aggregate
+            // 2. Create supplier 
             Supplier supplier = Supplier.Create(rq.CompanyName, rq.CountryId, reg.UserId);
 
             _log.LogInformation("Supplier {SupplierId} created for User {UserId}", supplier.Id, reg.UserId);
