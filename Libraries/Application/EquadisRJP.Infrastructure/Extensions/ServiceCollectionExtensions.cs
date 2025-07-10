@@ -31,6 +31,7 @@ namespace EquadisRJP.Infrastructure.Extensions
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<ISupplierRepository, SupplierRepository>();
             services.AddScoped<IRetailerRepository, RetailerRepository>();
+            services.AddScoped<IPartnershipRepository, PartnershipRepository>();
 
         }
 

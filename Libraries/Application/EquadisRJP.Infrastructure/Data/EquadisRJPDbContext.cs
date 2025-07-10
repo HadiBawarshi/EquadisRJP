@@ -121,5 +121,23 @@ public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default) => await base.SaveChangesAsync(cancellationToken);
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        foreach (var entry in ChangeTracker.Entries<EntityBase>())
+        {
+            switch (entry.State)
+            {
+                case EntityState.Added:
+                    entry.Entity.CreatedDate = DateTime.UtcNow;
+                    break;
+
+                case EntityState.Modified:
+                    entry.Entity.ModifiedDate = DateTime.UtcNow;
+                    break;
+            }
+        }
+        return await base.SaveChangesAsync(cancellationToken);
+
+    }
+
 }

@@ -20,6 +20,10 @@ namespace EquadisRJP.Domain.Errors
 
             public static readonly Error NotExpired =
                 Error.Conflict("Partnership.NotExpired", "Only expired partnerships can be renewed.");
+
+
+            public static readonly Error AlreadyExists =
+               Error.Conflict("Partnership.AlreadyExists", "Partnerships already exists.");
         }
 
         public static class ServerError
