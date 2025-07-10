@@ -6,7 +6,7 @@ namespace EquadisRJP.Application.Behaviour
 {
     public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
-    where TResponse : Result, new()
+    where TResponse : Result
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
@@ -37,7 +37,7 @@ namespace EquadisRJP.Application.Behaviour
 
                     var error = Error.Validation("Validation.Failed", errorMessage);
 
-                    return (TResponse)(object)Result.Failure(error); // 👈 Cast to TResponse
+                    return (TResponse)(object)Result.Failure(error);
                 }
             }
 

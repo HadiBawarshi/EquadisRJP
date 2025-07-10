@@ -109,8 +109,6 @@ public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
             entity.ToTable("Supplier");
 
             entity.Property(e => e.CompanyName).HasMaxLength(255);
-            entity.Property(e => e.Email).HasMaxLength(511);
-            entity.Property(e => e.PhoneNumber).HasMaxLength(50);
             entity.Property(e => e.UserId).HasMaxLength(450);
 
             entity.HasOne(d => d.Country).WithMany(p => p.Suppliers)

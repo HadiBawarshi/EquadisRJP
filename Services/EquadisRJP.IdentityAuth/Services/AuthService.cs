@@ -64,7 +64,7 @@ namespace EquadisRJP.IdentityAuth.Services
             if (!await _roleManager.RoleExistsAsync(dto.Role))
                 throw new ApplicationException("UnExpected role");
 
-            var user = new ApplicationUser { UserName = dto.Username, Email = dto.Email };
+            var user = new ApplicationUser { UserName = dto.Username, Email = dto.Email, PhoneNumber = dto.PhoneNumber, Name = dto.Name };
             var result = await _userManager.CreateAsync(user, dto.Password);
 
             if (!result.Succeeded)

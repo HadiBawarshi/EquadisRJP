@@ -11,12 +11,14 @@ namespace EquadisRJP.Application.Extensions
         public static void AddApplicationServices(this IServiceCollection services)
         {
             var assemblyReference = typeof(ApplicationAssemblyReference).Assembly;
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assemblyReference));
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(config =>
+            {
+                config.ShouldMapProperty = p => p.GetMethod.IsPublic || p.GetMethod.IsAssembly;
+
+            }, Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-
-
         }
     }
 }
