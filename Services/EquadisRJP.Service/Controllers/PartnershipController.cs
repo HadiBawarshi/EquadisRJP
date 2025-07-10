@@ -23,5 +23,24 @@ namespace EquadisRJP.Service.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
+
+
+
+        [Authorize(Roles = "Admin,Supplier")]
+        [HttpPatch(Name = "Expire")]
+        public async Task<IActionResult> Expire([FromForm] ExpirePartnershipCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Supplier")]
+        [HttpPatch(Name = "Renew")]
+        public async Task<IActionResult> Renew([FromForm] RenewPartnershipCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
     }
 }
