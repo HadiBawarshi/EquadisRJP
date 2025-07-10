@@ -26,7 +26,7 @@ namespace EquadisRJP.Service.Controllers
         }
 
 
-
+        [Authorize(Roles = "Admin")]
         [HttpGet("{supplierId}")]
         public async Task<IActionResult> GetRetailersOfSupplier(int supplierId)
         {

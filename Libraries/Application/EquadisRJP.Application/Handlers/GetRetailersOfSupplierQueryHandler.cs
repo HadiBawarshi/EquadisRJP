@@ -18,8 +18,7 @@ namespace EquadisRJP.Application.Handlers
             _mapper = mapper;
         }
 
-        public async Task<Result<List<RetailerDto>>> Handle(
-            GetRetailersOfSupplierQuery q, CancellationToken ct)
+        public async Task<Result<List<RetailerDto>>> Handle(GetRetailersOfSupplierQuery q, CancellationToken ct)
         {
             var list = await _repo.GetRetailersBySupplierAsync(q.SupplierId, ct);
             var dto = _mapper.Map<List<RetailerDto>>(list);

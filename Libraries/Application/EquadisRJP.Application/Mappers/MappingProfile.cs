@@ -9,6 +9,8 @@ namespace EquadisRJP.Application.Mappers
         public MappingProfile()
         {
             CreateMap<Retailer, RetailerDto>();
+            CreateMap<Supplier, SupplierDto>();
+
 
         }
     }
