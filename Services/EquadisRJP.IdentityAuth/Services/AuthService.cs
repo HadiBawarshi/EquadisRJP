@@ -3,6 +3,7 @@ using EquadisRJP.IdentityAuth.Data;
 using EquadisRJP.IdentityAuth.Models.Dtos;
 using EquadisRJP.IdentityAuth.Models.Responses;
 using EquadisRJP.IdentityAuth.Public.Dtos;
+using EquadisRJP.IdentityAuth.Public.Responses;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -71,11 +72,7 @@ namespace EquadisRJP.IdentityAuth.Services
 
             await _userManager.AddToRoleAsync(user, dto.Role);
 
-            return new RegisterResponseDto
-            {
-                Success = true,
-                UserId = user.Id
-            };
+            return new RegisterResponseDto(true, user.Id);
         }
 
 

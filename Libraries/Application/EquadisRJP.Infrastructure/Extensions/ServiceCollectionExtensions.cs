@@ -1,4 +1,5 @@
-﻿using EquadisRJP.Domain.Repositories;
+﻿using EquadisRJP.Application.ExternalServices;
+using EquadisRJP.Domain.Repositories;
 using EquadisRJP.Infrastructure.Data;
 using EquadisRJP.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,10 +18,18 @@ namespace EquadisRJP.Infrastructure.Extensions
             services.AddDbContext<EquadisRJPDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+
+            services.AddHttpClient<IIdentityAuthClient, IdentityAuthClient>(c =>
+            {
+                c.BaseAddress = new Uri(configuration["IdentityAuth:BaseUrl"]);
+                c.DefaultRequestHeaders.Accept.Add(new("application/json"));
+            });
+
+
+
             services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<EquadisRJPDbContext>());
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<ISupplierRepository, SupplierRepository>();
-
 
         }
 
