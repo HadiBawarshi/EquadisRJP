@@ -1,4 +1,5 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,5 +24,15 @@ namespace EquadisRJP.Service.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
+
+
+        [HttpGet("{supplierId}")]
+        public async Task<IActionResult> GetRetailersOfSupplier(int supplierId)
+        {
+            var result = await _mediator.Send(new GetRetailersOfSupplierQuery(supplierId));
+            return Ok(result);
+        }
+
     }
 }

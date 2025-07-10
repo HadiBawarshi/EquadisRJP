@@ -3,36 +3,33 @@ using EquadisRJP.Domain.Errors;
 using EquadisRJP.Domain.Primitives;
 using EquadisRJP.Domain.Repositories;
 using MediatR;
+using static EquadisRJP.Domain.Entities.Partnership;
 
 namespace EquadisRJP.Application.Handlers
 {
-    public class RenewPartnershipHandler : IRequestHandler<RenewPartnershipCommand, Result>
+    public class ExpirePartnershipCommandHandler : IRequestHandler<ExpirePartnershipCommand, Result>
     {
         private readonly IPartnershipRepository _repo;
         private readonly IUnitOfWork _uow;
 
-        public RenewPartnershipHandler(IPartnershipRepository repo, IUnitOfWork uow)
+        public ExpirePartnershipCommandHandler(IPartnershipRepository repo, IUnitOfWork uow)
         {
             _repo = repo;
             _uow = uow;
         }
 
-        public async Task<Result> Handle(RenewPartnershipCommand rq, CancellationToken ct)
+        public async Task<Result> Handle(ExpirePartnershipCommand rq, CancellationToken ct)
         {
             var partnership = await _repo.GetByIdAsync(rq.PartnershipId, ct);
             if (partnership is null)
                 return Result.Failure(DomainErrors.Partnership.NotFound);
 
-            try
-            {
-                partnership.Renew(rq.NewExpiryDate);
-            }
-            catch (InvalidOperationException)
-            {
-                return Result.Failure(DomainErrors.Partnership.NotExpired);
-            }
+            if (partnership.StatusId == (int)PartnershipStatus.Expired)
+                return Result.Failure(DomainErrors.Partnership.AlreadyExpired);
 
+            partnership.Expire();
             await _uow.SaveChangesAsync(ct);
+
             return Result.Success();
         }
     }
