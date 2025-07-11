@@ -33,7 +33,7 @@ namespace EquadisRJP.Application.Handlers
 
             await _auditLogger.LogAsync(
              request.RetailerId.ToString(),
-             "Subscribe-To-Offer",
+             "UnSubscribe-To-Offer",
              nameof(OfferSubscription),
              subscription.Id,
              JsonSerializer.Serialize(subscription)
