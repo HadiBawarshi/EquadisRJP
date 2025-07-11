@@ -1,23 +1,27 @@
-﻿using EquadisRJP.Infrastructure.Data;
+﻿using EquadisRJP.IdentityAuth.Data;
+using EquadisRJP.IdentityAuth.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace EquadisRJP.Infrastructure.Extensions
+namespace EquadisRJP.IdentityAuth.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
+
+        public static void AddIdentityDbContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<EquadisRJPDbContext>(options =>
+            // Set up DbContext with SQL Server connection string
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-
+            // Add Identity services
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                 .AddDefaultTokenProviders();
         }
-
 
         public static void AddJWTAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
@@ -43,9 +47,15 @@ namespace EquadisRJP.Infrastructure.Extensions
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = configuration["JwtSettings:Issuer"],
                     ValidAudience = configuration["JwtSettings:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"] ?? string.Empty))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"] ?? string.Empty)),
+
                 };
             });
+        }
+
+        public static void AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<IAuthService, AuthService>();
         }
     }
 }
