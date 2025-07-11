@@ -43,6 +43,13 @@ namespace EquadisRJP.Infrastructure.Repositories
                    s.StatusId == (int)OfferSubscription.SubscriptionStatus.Active))
                 .AsNoTracking()
                 .ToListAsync(ct);
+
+
+            //&&
+            //       !_dbContext.OfferSubscriptions.Any(s =>
+            //       s.RetailerId == retailerId &&
+            //       s.CommercialOfferId == o.Id &&
+            //       s.StatusId == (int)OfferSubscription.SubscriptionStatus.Active)
         }
     }
 

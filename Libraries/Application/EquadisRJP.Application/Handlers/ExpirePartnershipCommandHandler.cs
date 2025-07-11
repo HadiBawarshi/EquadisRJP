@@ -24,6 +24,9 @@ namespace EquadisRJP.Application.Handlers
             if (partnership is null)
                 return Result.Failure(DomainErrors.Partnership.NotFound);
 
+            if (partnership.SupplierId != rq.SupplierId)
+                return Result.Failure(DomainErrors.Partnership.NotFound);
+
             if (partnership.StatusId == (int)PartnershipStatus.Expired)
                 return Result.Failure(DomainErrors.Partnership.AlreadyExpired);
 

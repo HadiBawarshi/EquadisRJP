@@ -1,4 +1,6 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Common;
+using EquadisRJP.Application.Dtos;
 using EquadisRJP.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -10,8 +12,13 @@ namespace EquadisRJP.Service.Controllers
 
     public class PartnershipController : ApiBaseController
     {
-        public PartnershipController(IMediator mediator) : base(mediator)
+
+        private readonly ICurrentParty _currentParty;
+
+        public PartnershipController(IMediator mediator, ICurrentParty currentParty) : base(mediator)
         {
+            _currentParty = currentParty;
+
         }
 
 
@@ -19,28 +26,28 @@ namespace EquadisRJP.Service.Controllers
         [HttpPost(Name = "CreatePartnership")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
 
-        public async Task<IActionResult> CreatePartnership([FromForm] StartPartnershipCommand command)
+        public async Task<IActionResult> CreatePartnership([FromForm] StartPartnershipDto dto)
         {
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(new StartPartnershipCommand(_currentParty.SupplierId.Value, dto.RetailerId, dto.ExpiryDate));
             return Ok(result);
         }
 
 
 
 
-        [Authorize(Roles = "Admin,Supplier")]
+        [Authorize(Roles = "Supplier")]
         [HttpPatch(Name = "Expire")]
-        public async Task<IActionResult> Expire([FromForm] ExpirePartnershipCommand command)
+        public async Task<IActionResult> Expire([FromBody] ExpirePartnershipDto dto)
         {
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(new ExpirePartnershipCommand(_currentParty.SupplierId.Value, dto.PartnershipId));
             return Ok(result);
         }
 
         [Authorize(Roles = "Supplier")]
         [HttpPatch(Name = "Renew")]
-        public async Task<IActionResult> Renew([FromForm] RenewPartnershipCommand command)
+        public async Task<IActionResult> Renew([FromBody] RenewPartnershipDto dto)
         {
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(new RenewPartnershipCommand(_currentParty.SupplierId.Value, dto.PartnershipId, dto.NewExpiryDate));
             return Ok(result);
         }
 

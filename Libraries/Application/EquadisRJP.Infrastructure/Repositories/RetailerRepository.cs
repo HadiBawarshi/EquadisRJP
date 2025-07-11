@@ -23,6 +23,12 @@ namespace EquadisRJP.Infrastructure.Repositories
                 .ToListAsync(ct);
         }
 
-
+        public async Task<int?> GetRetailerIdByUserIdAsync(string userId)
+        {
+            return await _dbContext.Retailers
+                .Where(r => r.UserId == userId)
+                .Select(r => (r.Id))
+                .FirstOrDefaultAsync();
+        }
     }
 }

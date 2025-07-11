@@ -7,7 +7,7 @@ namespace EquadisRJP.Application.Validators
     {
         public StartPartnershipCommandValidator()
         {
-            RuleFor(x => x.SupplierId).GreaterThan(0);
+            RuleFor(x => x.SupplierId).GreaterThan(0).NotNull();
             RuleFor(x => x.RetailerId).GreaterThan(0);
 
             //RuleFor(x => x.ExpiryDate)

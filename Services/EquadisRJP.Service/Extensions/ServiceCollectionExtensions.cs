@@ -1,4 +1,7 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using EquadisRJP.Application.Common;
+using EquadisRJP.Service.Security;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.OpenApi.Models;
 
 namespace EquadisRJP.Service.Extensions
 {
@@ -38,6 +41,13 @@ namespace EquadisRJP.Service.Extensions
                 });
             });
 
+        }
+
+
+        public static void AddApiServices(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddScoped<IClaimsTransformation, PartyClaimsTransformer>();
+            services.AddScoped<ICurrentParty, CurrentParty>();
         }
     }
 }

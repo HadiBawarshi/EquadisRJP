@@ -22,5 +22,13 @@ namespace EquadisRJP.Infrastructure.Repositories
                       .AsNoTracking()
                       .ToListAsync(ct);
         }
+
+        public async Task<int?> GetSupplierIdByUserIdAsync(string userId)
+        {
+            return await _dbContext.Suppliers
+                .Where(s => s.UserId == userId)
+                .Select(s => s.Id)
+                .FirstOrDefaultAsync();
+        }
     }
 }
