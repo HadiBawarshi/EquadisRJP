@@ -6,12 +6,12 @@ using MediatR;
 
 namespace EquadisRJP.Application.Handlers
 {
-    public sealed class UpdateOfferHandler : IRequestHandler<UpdateOfferCommand, Result>
+    public sealed class UpdateOfferCommandHandler : IRequestHandler<UpdateOfferCommand, Result>
     {
         private readonly IOfferRepository _repo;
         private readonly IUnitOfWork _uow;
 
-        public UpdateOfferHandler(IOfferRepository repo, IUnitOfWork uow)
+        public UpdateOfferCommandHandler(IOfferRepository repo, IUnitOfWork uow)
         {
             _repo = repo;
             _uow = uow;

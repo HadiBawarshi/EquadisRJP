@@ -11,7 +11,8 @@ namespace EquadisRJP.Application.Mappers
             CreateMap<Retailer, RetailerDto>();
             CreateMap<Supplier, SupplierDto>();
             CreateMap<Partnership, PartnershipDto>();
-
+            CreateMap<CommercialOffer, RetailerOfferDto>()
+           .ForMember(d => d.SupplierName, o => o.MapFrom(src => src.Supplier.CompanyName));
 
 
         }
