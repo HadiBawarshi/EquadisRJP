@@ -30,6 +30,11 @@ try
 
     builder.Services.AddControllers();
 
+    builder.Services.AddHttpContextAccessor();
+
+    builder.Services.AddMemoryCache();
+
+
     builder.Services.AddEndpointsApiExplorer();
 
 
@@ -41,6 +46,7 @@ try
 
     builder.Services.AddJWTAuthentication(builder.Configuration);
 
+    builder.Services.AddApiServices(builder.Configuration);
 
     var app = builder.Build();
 

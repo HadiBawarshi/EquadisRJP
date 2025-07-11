@@ -22,7 +22,8 @@ namespace EquadisRJP.Application.Handlers
             var partnership = await _repo.GetByIdAsync(rq.PartnershipId, ct);
             if (partnership is null)
                 return Result.Failure(DomainErrors.Partnership.NotFound);
-
+            if (partnership.SupplierId != rq.SupplierId)
+                return Result.Failure(DomainErrors.Partnership.NotFound);
             try
             {
                 partnership.Renew(rq.NewExpiryDate);

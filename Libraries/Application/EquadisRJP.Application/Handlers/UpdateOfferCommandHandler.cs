@@ -23,6 +23,10 @@ namespace EquadisRJP.Application.Handlers
             if (offer is null)
                 return Result.Failure(DomainErrors.Offer.NotFound);
 
+            if (offer.SupplierId != rq.SupplierId)
+                return Result.Failure(DomainErrors.Offer.NotFound);
+
+
             if (rq.Archive)
                 offer.Archive();
             else

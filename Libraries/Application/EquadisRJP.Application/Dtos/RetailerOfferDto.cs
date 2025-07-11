@@ -6,6 +6,5 @@
      DateTime ValidFrom,
      DateTime ValidTo,
      int DiscountValuePercentage,
-     int SupplierId,
-     string SupplierName);
+     int SupplierId);
 }

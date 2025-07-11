@@ -9,5 +9,6 @@ namespace EquadisRJP.Application.Commands
      DateTime ValidFrom,
      DateTime ValidTo,
      int DiscountValuePercentage,
-     bool Archive) : IRequest<Result>;
+     bool Archive,
+     int SupplierId) : IRequest<Result>;
 }

@@ -8,4 +8,19 @@
         public DateTime StartDate { get; init; }
         public DateTime? ExpiryDate { get; init; }
     }
+
+
+
+    public record StartPartnershipDto(
+        int RetailerId,
+        DateTime? ExpiryDate
+    );
+
+
+    public record RenewPartnershipDto(
+     int PartnershipId,
+     DateTime NewExpiryDate);
+
+
+    public record ExpirePartnershipDto(int PartnershipId);
 }

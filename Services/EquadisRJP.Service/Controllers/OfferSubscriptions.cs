@@ -1,4 +1,5 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Common;
 using EquadisRJP.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -9,23 +10,28 @@ namespace EquadisRJP.Service.Controllers
 
     public class OfferSubscriptions : ApiBaseController
     {
-        public OfferSubscriptions(IMediator mediator) : base(mediator)
+
+        private readonly ICurrentParty _currentParty;
+
+        public OfferSubscriptions(IMediator mediator, ICurrentParty currentParty) : base(mediator)
         {
+            _currentParty = currentParty;
+
         }
 
         [Authorize(Roles = "Retailer")]
         [HttpPost(Name = "subscribe")]
-        public async Task<IActionResult> Subscribe(SubscribeToOfferCommand command)
+        public async Task<IActionResult> Subscribe([FromBody] int OfferId)
         {
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(new SubscribeToOfferCommand(_currentParty.RetailerId.Value, OfferId));
             return Ok(result);
         }
 
         [Authorize(Roles = "Retailer")]
         [HttpDelete(Name = "unsubscribe")]
-        public async Task<IActionResult> Unsubscribe(UnsubscribeFromOfferCommand command)
+        public async Task<IActionResult> Unsubscribe([FromBody] int OfferId)
         {
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(new UnsubscribeFromOfferCommand(_currentParty.RetailerId.Value, OfferId));
             return Ok(result);
         }
 
@@ -34,8 +40,8 @@ namespace EquadisRJP.Service.Controllers
         [HttpGet(Name = "GetCurrentOffers")]
         public async Task<IActionResult> GetCurrentOffers()
         {
-            int retailerId = 1;  // claim helper
-            var result = await _mediator.Send(new GetCurrentOffersForRetailerQuery(retailerId));
+
+            var result = await _mediator.Send(new GetCurrentOffersForRetailerQuery(_currentParty.RetailerId.Value));
             return Ok(result);
         }
     }

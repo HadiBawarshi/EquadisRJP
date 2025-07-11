@@ -6,5 +6,8 @@ namespace EquadisRJP.Domain.Repositories
     {
 
         Task<IReadOnlyList<Retailer>> GetRetailersBySupplierAsync(int supplierId, CancellationToken ct = default);
+
+        Task<int?> GetRetailerIdByUserIdAsync(string userId);
+
     }
 }
