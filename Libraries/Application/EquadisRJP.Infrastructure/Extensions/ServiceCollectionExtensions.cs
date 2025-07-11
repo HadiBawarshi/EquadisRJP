@@ -33,6 +33,7 @@ namespace EquadisRJP.Infrastructure.Extensions
             services.AddScoped<IRetailerRepository, RetailerRepository>();
             services.AddScoped<IPartnershipRepository, PartnershipRepository>();
             services.AddScoped<IOfferRepository, OfferRepository>();
+            services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
 
 
         }

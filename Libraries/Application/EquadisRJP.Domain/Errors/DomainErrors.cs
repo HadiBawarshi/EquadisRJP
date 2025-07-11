@@ -76,5 +76,16 @@ namespace EquadisRJP.Domain.Errors
         }
 
 
+
+        public static class Subscription
+        {
+            public static readonly Error AlreadyExists =
+                Error.Conflict("Subscription.Exists", "Offer already subscribed.");
+            public static readonly Error NotFound =
+                Error.NotFound("Subscription.NotFound", "Subscription not found.");
+            public static readonly Error NotPartnered =
+                Error.Conflict("Subscription.NotPartnered", "Retailer is not partnered with supplier.");
+        }
+
     }
 }

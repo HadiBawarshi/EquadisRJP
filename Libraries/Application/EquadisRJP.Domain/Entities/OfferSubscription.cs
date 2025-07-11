@@ -2,16 +2,22 @@
 
 public partial class OfferSubscription : EntityBase
 {
+
+    public enum SubscriptionStatus
+    {
+        Active = 1,
+        Inactive = 2
+    }
     public OfferSubscription()
     {
     }
 
-    private OfferSubscription(int? retailerId, int? commercialOfferId, DateTime? validFrom, DateTime? validTo)
+    private OfferSubscription(int? retailerId, int? commercialOfferId)
     {
         RetailerId = retailerId;
         CommercialOfferId = commercialOfferId;
-        ValidFrom = validFrom;
-        ValidTo = validTo;
+        StatusId = (int)SubscriptionStatus.Active;
+
 
     }
 
@@ -19,17 +25,31 @@ public partial class OfferSubscription : EntityBase
 
     public int? CommercialOfferId { get; set; }
 
-    public DateTime? ValidFrom { get; set; }
+    public int StatusId { get; private set; }
 
-    public DateTime? ValidTo { get; set; }
 
     public virtual CommercialOffer? CommercialOffer { get; set; }
 
     public virtual Retailer? Retailer { get; set; }
 
 
-    public static OfferSubscription Create(int? retailerId, int? commercialOfferId, DateTime? validFrom, DateTime? validTo)
+    public static OfferSubscription Create(int? retailerId, int? commercialOfferId)
     {
-        return new OfferSubscription(retailerId, commercialOfferId, validFrom, validTo);
+        return new OfferSubscription(retailerId, commercialOfferId);
+    }
+
+    public void Unsubscribe()
+    {
+        if (StatusId == (int)SubscriptionStatus.Inactive)
+            return; // Already inactive
+
+        StatusId = (int)SubscriptionStatus.Inactive;
+        ModifiedDate = DateTime.UtcNow;
+    }
+
+
+    public bool IsActive()
+    {
+        return StatusId == (int)SubscriptionStatus.Active;
     }
 }
