@@ -40,12 +40,12 @@ namespace EquadisRJP.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<T>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Set<T>().ToListAsync(cancellationToken);
+            return await _dbContext.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Set<T>().Where(predicate).ToListAsync(cancellationToken);
+            return await _dbContext.Set<T>().Where(predicate).AsNoTracking().ToListAsync(cancellationToken);
         }
 
         public async Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
