@@ -8,11 +8,12 @@ public partial class Partnership : EntityBase
     {
     }
 
-    private Partnership(int supplierId, int retailerId, DateTime startDate, DateTime? expiryDate)
+    private Partnership(int supplierId, int retailerId, DateTime? expiryDate)
     {
         SupplierId = supplierId;
         RetailerId = retailerId;
-        StartDate = startDate;
+        //StartDate = startDate;
+        StartDate = DateTime.UtcNow;
         ExpiryDate = expiryDate;
         StatusId = (int)PartnershipStatus.Active;
     }
@@ -40,22 +41,23 @@ public partial class Partnership : EntityBase
 
     public virtual Supplier? Supplier { get; set; }
 
-    public static Partnership Create(int supplierId, int retailerId, DateTime startDate, DateTime? expiryDate)
+    public static Partnership Create(int supplierId, int retailerId, DateTime? expiryDate)
 
     {
-        return new Partnership(supplierId, retailerId, startDate, expiryDate);
+        return new Partnership(supplierId, retailerId, expiryDate);
     }
 
 
-    public static Partnership Start(int supplierId, int retailerId, DateTime startDate, DateTime? expiryDate)
+    public static Partnership Start(int supplierId, int retailerId, DateTime? expiryDate)
     {
         if (supplierId <= 0 || retailerId <= 0)
             throw new ArgumentException("Supplier and Retailer IDs must be valid.");
+        var now = DateTime.UtcNow;
 
-        if (expiryDate.HasValue && expiryDate <= startDate)
+        if (expiryDate.HasValue && expiryDate <= now)
             throw new ArgumentException("Expiry date must be after start date.");
 
-        return new Partnership(supplierId, retailerId, startDate, expiryDate);
+        return new Partnership(supplierId, retailerId, expiryDate);
     }
     // Business Rule: Expire
     public void Expire()

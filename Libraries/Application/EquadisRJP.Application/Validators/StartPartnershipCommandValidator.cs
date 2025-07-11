@@ -9,11 +9,14 @@ namespace EquadisRJP.Application.Validators
         {
             RuleFor(x => x.SupplierId).GreaterThan(0);
             RuleFor(x => x.RetailerId).GreaterThan(0);
-            RuleFor(x => x.StartDate).NotEmpty();
+
+            //RuleFor(x => x.ExpiryDate)
+            //    .GreaterThan(x => x.StartDate)
+            //    .When(x => x.ExpiryDate.HasValue);
 
             RuleFor(x => x.ExpiryDate)
-                .GreaterThan(x => x.StartDate)
-                .When(x => x.ExpiryDate.HasValue);
+            .Must(exp => !exp.HasValue || exp.Value > DateTime.UtcNow)
+            .WithMessage("ExpiryDate must be in the future.");
         }
     }
 }

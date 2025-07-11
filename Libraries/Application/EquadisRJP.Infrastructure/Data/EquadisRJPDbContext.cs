@@ -58,8 +58,7 @@ public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
                 .HasNoKey()
                 .ToTable("OfferSubscription");
 
-            entity.Property(e => e.ValidFrom).HasColumnType("datetime");
-            entity.Property(e => e.ValidTo).HasColumnType("datetime");
+
 
             entity.HasOne(d => d.CommercialOffer).WithMany()
                 .HasForeignKey(d => d.CommercialOfferId)
