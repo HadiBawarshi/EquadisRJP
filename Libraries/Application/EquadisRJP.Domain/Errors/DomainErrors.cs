@@ -33,15 +33,6 @@ namespace EquadisRJP.Domain.Errors
                 Error.NotFound("Partnership.NotFound", "Partnership not found.");
         }
 
-        public static class ServerError
-        {
-            public static readonly Error InternalServerError = new(
-                "InternalServerError",
-                "An unexpected error occurred",
-                ErrorType.Problem);
-        }
-
-
         public static class Supplier
         {
             public static Error CreationFailed => Error.Failure(
@@ -59,6 +50,30 @@ namespace EquadisRJP.Domain.Errors
 
 
 
+        public static class Offer
+        {
+            public static readonly Error NotFound = new(
+                "Offer.NotFound",
+                "Offer not found",
+                ErrorType.NotFound);
+            public static readonly Error InvalidDates = new(
+                "Offer.InvalidDates",
+                "ValidTo must be after ValidFrom",
+                ErrorType.Validation);
+            public static readonly Error InvalidDiscountValue = new(
+                "Offer.InvalidDiscountValue",
+                "Discount value must be between 0 and 100",
+                ErrorType.Validation);
+        }
+
+
+        public static class ServerError
+        {
+            public static readonly Error InternalServerError = new(
+                "InternalServerError",
+                "An unexpected error occurred",
+                ErrorType.Problem);
+        }
 
 
     }

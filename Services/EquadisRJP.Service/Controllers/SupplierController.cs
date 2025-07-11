@@ -31,5 +31,7 @@ namespace EquadisRJP.Service.Controllers
             var result = await _mediator.Send(new GetSuppliersOfRetailerQuery(retailerId));
             return Ok(result);
         }
+
+
     }
 }
