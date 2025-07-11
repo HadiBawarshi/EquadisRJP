@@ -1,6 +1,7 @@
 using EquadisRJP.Application;
 using EquadisRJP.Infrastructure;
 using EquadisRJP.Service.Middlewares;
+using Microsoft.OpenApi.Models;
 using NLog;
 using NLog.Web;
 
@@ -29,10 +30,17 @@ try
 
     builder.Services.AddControllers();
 
+    builder.Services.AddEndpointsApiExplorer();
+
 
     builder.Services.AddApplicationServices();
 
     builder.Services.AddInfrastructureServices(builder.Configuration);
+
+    builder.Services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "EquadisRJP.API", Version = "v1" });
+    });
 
 
     var app = builder.Build();
@@ -41,10 +49,20 @@ try
     //Exception handling middleware
     app.UseMiddleware<ExceptionHandlingMiddleware>();
 
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+        app.UseSwagger();
+        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EquadisRJP.API v1"));
+    }
+
+    app.UseRouting();
 
     // Configure the HTTP request pipeline.
 
     app.UseHttpsRedirection();
+
+    app.UseAuthentication();
 
     app.UseAuthorization();
 
