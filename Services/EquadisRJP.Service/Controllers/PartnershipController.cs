@@ -1,4 +1,5 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,15 @@ namespace EquadisRJP.Service.Controllers
         public async Task<IActionResult> Renew([FromForm] RenewPartnershipCommand command)
         {
             var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet(Name = "GetActivePartnerships")]
+        public async Task<IActionResult> GetActivePartnerships()
+        {
+            var result = await _mediator.Send(new GetActivePartnershipsQuery());
             return Ok(result);
         }
     }

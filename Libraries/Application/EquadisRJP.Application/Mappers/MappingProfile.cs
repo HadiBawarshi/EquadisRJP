@@ -10,6 +10,8 @@ namespace EquadisRJP.Application.Mappers
         {
             CreateMap<Retailer, RetailerDto>();
             CreateMap<Supplier, SupplierDto>();
+            CreateMap<Partnership, PartnershipDto>();
+
 
 
         }
