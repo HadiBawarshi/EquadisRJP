@@ -29,5 +29,14 @@ namespace EquadisRJP.Domain.Errors
                 "Failed to create the supplier.");
         }
 
+
+        public static class Retailer
+        {
+            public static Error CreationFailed => Error.Failure(
+                "Retailer.CreationFailed",
+                "Failed to create the retailer.");
+        }
+
+
     }
 }
