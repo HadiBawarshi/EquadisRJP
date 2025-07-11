@@ -25,7 +25,7 @@ namespace EquadisRJP.Application.Handlers
             if (await _repository.ExistsActiveAsync(rq.SupplierId, rq.RetailerId))
                 return Result.Failure(DomainErrors.Partnership.AlreadyExists);
 
-            var partnership = Partnership.Start(rq.SupplierId, rq.RetailerId, rq.StartDate, rq.ExpiryDate);
+            var partnership = Partnership.Start(rq.SupplierId, rq.RetailerId, rq.ExpiryDate);
 
             await _repository.AddAsync(partnership, ct);
             await _uow.SaveChangesAsync(ct);

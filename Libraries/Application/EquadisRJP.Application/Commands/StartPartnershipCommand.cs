@@ -7,7 +7,6 @@ namespace EquadisRJP.Application.Commands
     {
         public int SupplierId { get; set; }
         public int RetailerId { get; set; }
-        public DateTime StartDate { get; set; }
         public DateTime? ExpiryDate { get; set; }
     }
 }
