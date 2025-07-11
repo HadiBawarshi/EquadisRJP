@@ -12,10 +12,13 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["EquadisRJP.Service/EquadisRJP.Service.csproj", "EquadisRJP.Service/"]
-RUN dotnet restore "./EquadisRJP.Service/EquadisRJP.Service.csproj"
+COPY ["Services/EquadisRJP.Service/EquadisRJP.Service.csproj", "Services/EquadisRJP.Service/"]
+COPY ["Libraries/Application/EquadisRJP.Application/EquadisRJP.Application.csproj", "Libraries/Application/EquadisRJP.Application/"]
+COPY ["Libraries/Application/EquadisRJP.Domain/EquadisRJP.Domain.csproj", "Libraries/Application/EquadisRJP.Domain/"]
+COPY ["Libraries/Application/EquadisRJP.Infrastructure/EquadisRJP.Infrastructure.csproj", "Libraries/Application/EquadisRJP.Infrastructure/"]
+RUN dotnet restore "./Services/EquadisRJP.Service/EquadisRJP.Service.csproj"
 COPY . .
-WORKDIR "/src/EquadisRJP.Service"
+WORKDIR "/src/Services/EquadisRJP.Service"
 RUN dotnet build "./EquadisRJP.Service.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
