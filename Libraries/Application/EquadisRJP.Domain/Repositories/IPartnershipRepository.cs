@@ -8,5 +8,7 @@ namespace EquadisRJP.Domain.Repositories
 
         Task<IReadOnlyList<Partnership>> GetActivePartnershipsAsync(CancellationToken ct = default);
 
+        Task<bool> HasActivePartnershipAsync(int retailerId, int supplierId);
+
     }
 }
