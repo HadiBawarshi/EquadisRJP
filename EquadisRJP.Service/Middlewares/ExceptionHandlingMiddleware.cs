@@ -9,10 +9,12 @@ namespace EquadisRJP.Service.Middlewares
     public class ExceptionHandlingMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly ILogger<ExceptionHandlingMiddleware> _logger;
 
-        public ExceptionHandlingMiddleware(RequestDelegate next)
+        public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)
         {
             _next = next;
+            _logger = logger;
         }
 
         public async Task Invoke(HttpContext context)
@@ -24,6 +26,9 @@ namespace EquadisRJP.Service.Middlewares
             catch (Exception exception)
             {
                 var error = MapToDomainError(exception);
+
+                _logger.LogError(exception, "\nException caught in middleware. Mapped to ErrorCode= {Code}, Description= {Desc} \n ",
+                error.Code, error.Description);
 
                 var statusCode = MapToStatusCode(error.Type);
 

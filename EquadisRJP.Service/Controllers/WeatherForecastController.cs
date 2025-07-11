@@ -1,3 +1,4 @@
+using EquadisRJP.Domain.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EquadisRJP.Service.Controllers
@@ -22,9 +23,9 @@ namespace EquadisRJP.Service.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             // Simulate a domain exception
-            //throw new PartnershipExpiredException("The partnership has expired.");
+            throw new PartnershipExpiredException("The partnership has expired.");
 
-            throw new Exception("Normal Exception");
+            //throw new Exception("Normal Exception");
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
