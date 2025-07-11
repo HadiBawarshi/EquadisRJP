@@ -54,11 +54,7 @@ public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
 
         modelBuilder.Entity<OfferSubscription>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("OfferSubscription");
-
-
+            entity.ToTable("OfferSubscription");
 
             entity.HasOne(d => d.CommercialOffer).WithMany()
                 .HasForeignKey(d => d.CommercialOfferId)

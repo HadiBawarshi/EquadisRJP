@@ -21,7 +21,7 @@ namespace EquadisRJP.Service.Controllers
 
         [Authorize(Roles = "Retailer")]
         [HttpPost(Name = "subscribe")]
-        public async Task<IActionResult> Subscribe([FromBody] int OfferId)
+        public async Task<IActionResult> Subscribe([FromForm] int OfferId)
         {
             var result = await _mediator.Send(new SubscribeToOfferCommand(_currentParty.RetailerId.Value, OfferId));
             return Ok(result);
@@ -29,7 +29,7 @@ namespace EquadisRJP.Service.Controllers
 
         [Authorize(Roles = "Retailer")]
         [HttpDelete(Name = "unsubscribe")]
-        public async Task<IActionResult> Unsubscribe([FromBody] int OfferId)
+        public async Task<IActionResult> Unsubscribe([FromForm] int OfferId)
         {
             var result = await _mediator.Send(new UnsubscribeFromOfferCommand(_currentParty.RetailerId.Value, OfferId));
             return Ok(result);
