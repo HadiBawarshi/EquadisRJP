@@ -1,5 +1,6 @@
 using EquadisRJP.Application;
 using EquadisRJP.Infrastructure;
+using EquadisRJP.Service.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,12 +8,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//move to infra
+
 builder.Services.AddApplicationServices();
+
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
 
 var app = builder.Build();
+
+
+//Exception handling middleware
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 
 // Configure the HTTP request pipeline.
 

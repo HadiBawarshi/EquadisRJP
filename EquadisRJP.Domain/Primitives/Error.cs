@@ -24,13 +24,25 @@
         public static Error Failure(string code, string description) =>
             new(code, description, ErrorType.Failure);
 
+        public static Error Failure(Error error) =>
+            new(error.Code, error.Description, ErrorType.Failure);
+
         public static Error NotFound(string code, string description) =>
             new(code, description, ErrorType.NotFound);
+
+        public static Error NotFound(Error error) =>
+            new(error.Code, error.Description, ErrorType.NotFound);
 
         public static Error Problem(string code, string description) =>
             new(code, description, ErrorType.Problem);
 
+        public static Error Problem(Error error) =>
+           new(error.Code, error.Description, ErrorType.Problem);
+
         public static Error Conflict(string code, string description) =>
             new(code, description, ErrorType.Conflict);
+
+        public static Error Conflict(Error error) =>
+             new(error.Code, error.Description, ErrorType.Conflict);
     }
 }
