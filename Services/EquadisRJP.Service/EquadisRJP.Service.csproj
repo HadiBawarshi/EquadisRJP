@@ -24,12 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EquadisRJP.Application\EquadisRJP.Application.csproj" />
-    <ProjectReference Include="..\EquadisRJP.Infrastructure\EquadisRJP.Infrastructure.csproj" />
+    <Folder Include="_config\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="_config\" />
+    <ProjectReference Include="..\..\Libraries\Application\EquadisRJP.Application\EquadisRJP.Application.csproj" />
+    <ProjectReference Include="..\..\Libraries\Application\EquadisRJP.Infrastructure\EquadisRJP.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
