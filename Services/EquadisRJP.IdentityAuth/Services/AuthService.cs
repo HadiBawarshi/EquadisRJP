@@ -2,6 +2,8 @@
 using EquadisRJP.IdentityAuth.Data;
 using EquadisRJP.IdentityAuth.Models.Dtos;
 using EquadisRJP.IdentityAuth.Models.Responses;
+using EquadisRJP.IdentityAuth.Public.Dtos;
+using EquadisRJP.IdentityAuth.Public.Responses;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -62,7 +64,7 @@ namespace EquadisRJP.IdentityAuth.Services
             if (!await _roleManager.RoleExistsAsync(dto.Role))
                 throw new ApplicationException("UnExpected role");
 
-            var user = new ApplicationUser { UserName = dto.Username, Email = dto.Email };
+            var user = new ApplicationUser { UserName = dto.Username, Email = dto.Email, PhoneNumber = dto.PhoneNumber, Name = dto.Name };
             var result = await _userManager.CreateAsync(user, dto.Password);
 
             if (!result.Succeeded)
@@ -70,11 +72,7 @@ namespace EquadisRJP.IdentityAuth.Services
 
             await _userManager.AddToRoleAsync(user, dto.Role);
 
-            return new RegisterResponseDto
-            {
-                Success = true,
-                UserId = user.Id
-            };
+            return new RegisterResponseDto(true, user.Id);
         }
 
 

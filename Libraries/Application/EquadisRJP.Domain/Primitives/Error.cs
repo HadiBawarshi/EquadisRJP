@@ -44,5 +44,12 @@
 
         public static Error Conflict(Error error) =>
              new(error.Code, error.Description, ErrorType.Conflict);
+
+
+        public static Error Validation(string code, string description) =>
+           new(code, description, ErrorType.Validation);
+
+        public static Error Validation(Error error) =>
+             new(error.Code, error.Description, ErrorType.Validation);
     }
 }

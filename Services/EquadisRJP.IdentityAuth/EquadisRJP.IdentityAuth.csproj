@@ -20,4 +20,8 @@
 	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Identity\EquadisRJP.IdentityAuth.Public\EquadisRJP.IdentityAuth.Public.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace EquadisRJP.Domain.Exceptions
+﻿namespace EquadisRJP.Domain.DomainExceptions
 {
     public class PartnershipExpiredException : Exception
     {

@@ -7,13 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="12.0.1" />
+	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="FluentValidation" Version="12.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageReference Include="MediatR" Version="12.4.1" />
+	  <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Identity\EquadisRJP.IdentityAuth.Public\EquadisRJP.IdentityAuth.Public.csproj" />
     <ProjectReference Include="..\EquadisRJP.Domain\EquadisRJP.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Responses\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using EquadisRJP.IdentityAuth.Models.Dtos;
+using EquadisRJP.IdentityAuth.Public.Dtos;
 using EquadisRJP.IdentityAuth.Services;
 using Microsoft.AspNetCore.Mvc;
 

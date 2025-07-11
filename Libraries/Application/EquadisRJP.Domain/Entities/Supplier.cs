@@ -6,20 +6,15 @@ public partial class Supplier : EntityBase
     {
     }
 
-    private Supplier(string? companyName, string? phoneNumber, string? email, int? countryId, string? userId)
+    private Supplier(string? companyName, int? countryId, string? userId)
     {
         CompanyName = companyName;
-        PhoneNumber = phoneNumber;
-        Email = email;
         CountryId = countryId;
         UserId = userId;
     }
 
     public string? CompanyName { get; set; }
 
-    public string? PhoneNumber { get; set; }
-
-    public string? Email { get; set; }
 
     public int? CountryId { get; set; }
 
@@ -31,8 +26,8 @@ public partial class Supplier : EntityBase
 
     public virtual ICollection<Partnership> Partnerships { get; set; } = new List<Partnership>();
 
-    public static Supplier Create(string? companyName, string? phoneNumber, string? email, int? countryId, string? userId)
+    public static Supplier Create(string? companyName, int? countryId, string? userId)
     {
-        return new Supplier(companyName, phoneNumber, email, countryId, userId);
+        return new Supplier(companyName, countryId, userId);
     }
 }
