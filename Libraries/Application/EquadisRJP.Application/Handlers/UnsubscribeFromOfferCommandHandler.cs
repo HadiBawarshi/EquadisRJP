@@ -1,7 +1,10 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Services;
+using EquadisRJP.Domain.Entities;
 using EquadisRJP.Domain.Primitives;
 using EquadisRJP.Domain.Repositories;
 using MediatR;
+using System.Text.Json;
 
 namespace EquadisRJP.Application.Handlers
 {
@@ -9,11 +12,13 @@ namespace EquadisRJP.Application.Handlers
     {
         private readonly ISubscriptionRepository _subsRepo;
         private readonly IUnitOfWork _uow;
+        private readonly IAuditService _auditLogger;
 
-        public UnsubscribeFromOfferCommandHandler(ISubscriptionRepository subsRepo, IUnitOfWork uow)
+        public UnsubscribeFromOfferCommandHandler(ISubscriptionRepository subsRepo, IUnitOfWork uow, IAuditService auditLogger)
         {
             _subsRepo = subsRepo;
             _uow = uow;
+            _auditLogger = auditLogger;
         }
 
         public async Task<Result> Handle(UnsubscribeFromOfferCommand request, CancellationToken ct)
@@ -25,6 +30,14 @@ namespace EquadisRJP.Application.Handlers
             subscription.Unsubscribe();
             await _uow.SaveChangesAsync(ct);
 
+
+            await _auditLogger.LogAsync(
+             request.RetailerId.ToString(),
+             "Subscribe-To-Offer",
+             nameof(OfferSubscription),
+             subscription.Id,
+             JsonSerializer.Serialize(subscription)
+         );
             return Result.Success();
         }
     }

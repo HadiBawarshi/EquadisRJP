@@ -1,9 +1,12 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Dtos.AuditEvent;
+using EquadisRJP.Application.Services;
 using EquadisRJP.Domain.Entities;
 using EquadisRJP.Domain.Errors;
 using EquadisRJP.Domain.Primitives;
 using EquadisRJP.Domain.Repositories;
 using MediatR;
+using System.Text.Json;
 
 namespace EquadisRJP.Application.Handlers
 {
@@ -12,11 +15,13 @@ namespace EquadisRJP.Application.Handlers
 
         private readonly IPartnershipRepository _repository;
         private readonly IUnitOfWork _uow;
+        private readonly IAuditService _auditLogger;
 
-        public StartPartnershipCommandHandler(IPartnershipRepository repository, IUnitOfWork uow)
+        public StartPartnershipCommandHandler(IPartnershipRepository repository, IUnitOfWork uow, IAuditService auditLogger)
         {
             _repository = repository;
             _uow = uow;
+            _auditLogger = auditLogger;
         }
 
         public async Task<Result> Handle(StartPartnershipCommand rq, CancellationToken ct)
@@ -30,6 +35,15 @@ namespace EquadisRJP.Application.Handlers
             await _repository.AddAsync(partnership, ct);
             await _uow.SaveChangesAsync(ct);
 
+            PartnershipAuditDto auditDto = new PartnershipAuditDto(rq.SupplierId, partnership.RetailerId, null, null, occurredAtUtc: DateTime.UtcNow);
+
+            await _auditLogger.LogAsync(
+                rq.SupplierId.ToString(),
+                "Start-Partnership",
+                nameof(Partnership),
+                partnership.Id,
+                JsonSerializer.Serialize(auditDto)
+            );
             return Result.Success();
         }
     }

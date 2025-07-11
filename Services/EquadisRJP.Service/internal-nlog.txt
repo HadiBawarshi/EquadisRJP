@@ -30704,3 +30704,465 @@
 2025-07-11 22:21:45.5993 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log with allowFileSharedWriting=False
 2025-07-11 22:21:45.5993 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log with allowFileSharedWriting=False
 2025-07-11 22:21:45.5993 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log with allowFileSharedWriting=False
+2025-07-11 22:38:29.4520 Debug Message Template Auto Format enabled
+2025-07-11 22:38:29.4681 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4681 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:29.4681 Debug FileTarget FilePathLayout with FilePathKind.Relative using AppDomain.BaseDirectory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\
+2025-07-11 22:38:29.4681 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4681 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:29.4681 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4681 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:29.4681 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4681 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:29.4681 Trace  Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:29.4681 Trace  Scanning SimpleLayout '${level}'
+2025-07-11 22:38:29.4681 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4681 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:29.4681 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4681 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:29.4681 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4681 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:29.4776 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4776 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:29.4776 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:29.4776 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2025-07-11 22:38:29.4776 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-07-11 22:38:29.4776 Trace ParseRulesElement
+2025-07-11 22:38:29.4776 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.5.0.3962. Product version: 5.5.0+1873145cbc26e0312d9481234d69ce7dc68aac4e. GlobalAssemblyCache: False
+2025-07-11 22:38:29.4776 Debug Start watching file-filter 'NLog.config' in directory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0
+2025-07-11 22:38:29.4776 Debug --- NLog configuration dump ---
+2025-07-11 22:38:29.4776 Debug Targets:
+2025-07-11 22:38:29.4776 Debug FileTarget(Name=logfile)
+2025-07-11 22:38:29.4776 Debug Rules:
+2025-07-11 22:38:29.4776 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2025-07-11 22:38:29.4776 Debug --- End of NLog configuration dump ---
+2025-07-11 22:38:29.4776 Trace FindReachableObject<System.Object>:
+2025-07-11 22:38:29.4776 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-11 22:38:29.4776 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-11 22:38:29.4776 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:29.4901 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:29.4901 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-11 22:38:29.4901 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:29.4901 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:29.4901 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-11 22:38:29.4901 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:29.4901 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:29.4901 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:29.4901 Trace     Scanning SimpleLayout '${level}'
+2025-07-11 22:38:29.4901 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:29.4901 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:29.4901 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:29.4901 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:29.4901 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:29.4901 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-11 22:38:29.4901 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-11 22:38:29.4901 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-11 22:38:29.4901 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2025-07-11 22:38:29.4901 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${exception}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${message}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${loggername}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${level}
+2025-07-11 22:38:29.4901 Trace Initializing ${level}
+2025-07-11 22:38:29.4901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4901 Trace Scanning SimpleLayout '${level}'
+2025-07-11 22:38:29.4901 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${longdate}
+2025-07-11 22:38:29.4901 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-11 22:38:29.4901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4901 Trace Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-11 22:38:29.4901 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:29.4901 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:29.4901 Trace   Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:29.4901 Trace   Scanning SimpleLayout '${level}'
+2025-07-11 22:38:29.4901 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:29.4901 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:29.4901 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:29.4901 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:29.4901 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-11 22:38:29.4901 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.4901 Trace Initializing logs/${shortdate}.log
+2025-07-11 22:38:29.4901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:29.4901 Trace Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-11 22:38:29.4901 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.4901 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:29.4901 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.4901 Trace Initializing FileTarget(Name=logfile)
+2025-07-11 22:38:29.4901 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-11 22:38:29.4901 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:29.4901 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:29.4901 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:29.4901 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-11 22:38:29.5064 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2025-07-11 22:38:29.5064 Info Configuration initialized.
+2025-07-11 22:38:29.5064 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-11 22:38:29.5064 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-11 22:38:29.5064 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-11 22:38:29.5064 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-11 22:38:29.5064 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-11 22:38:29.5706 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2025-07-11 22:38:29.5706 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2025-07-11 22:38:29.5706 Trace FindReachableObject<System.Object>:
+2025-07-11 22:38:29.5706 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-11 22:38:29.5706 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-11 22:38:29.5706 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:29.5706 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:29.5706 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-11 22:38:29.5706 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.5706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.5706 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:29.5706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.5706 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:29.5706 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-11 22:38:29.5706 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.5706 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:29.5706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.5706 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:29.5706 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:29.5706 Trace     Scanning SimpleLayout '${level}'
+2025-07-11 22:38:29.5706 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:29.5706 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:29.5706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.5706 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:29.5706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:29.5706 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:29.5706 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:29.5706 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:29.5706 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-11 22:38:29.5706 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-11 22:38:29.5706 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${exception}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${message}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${loggername}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${level}
+2025-07-11 22:38:29.5706 Trace Initializing ${level}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${longdate}
+2025-07-11 22:38:29.5706 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-11 22:38:29.5706 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:29.5706 Trace Initializing logs/${shortdate}.log
+2025-07-11 22:38:29.5706 Trace Initializing FileTarget(Name=logfile)
+2025-07-11 22:38:29.5706 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-11 22:38:29.5706 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:29.5706 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:29.5706 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:29.5706 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-11 22:38:29.5706 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-11 22:38:29.5706 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-11 22:38:29.5706 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-11 22:38:29.5706 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-11 22:38:29.5706 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-11 22:38:29.5841 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logfile
+2025-07-11 22:38:29.5841 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logfile
+2025-07-11 22:38:29.5841 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Hosting.Lifetime [Info] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Hosting.Lifetime [Error] => logfile
+2025-07-11 22:38:29.5841 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logfile
+2025-07-11 22:38:29.6091 Debug FileTarget(Name=logfile): Preparing for new file: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log'
+2025-07-11 22:38:29.6091 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-07.log [SeqNo=0 and FileTimeUtc=2025-07-07 23:58:06Z]
+2025-07-11 22:38:29.6091 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-08.log [SeqNo=0 and FileTimeUtc=2025-07-08 00:02:32Z]
+2025-07-11 22:38:29.6091 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-09.log [SeqNo=0 and FileTimeUtc=2025-07-09 00:11:55Z]
+2025-07-11 22:38:29.6091 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-10.log [SeqNo=0 and FileTimeUtc=2025-07-10 12:33:28Z]
+2025-07-11 22:38:29.6148 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-11.log [SeqNo=0 and FileTimeUtc=2025-07-11 00:42:02Z]
+2025-07-11 22:38:29.6148 Debug FileTarget(Name=logfile): Creating file appender: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log'
+2025-07-11 22:38:29.6148 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log with allowFileSharedWriting=False
+2025-07-11 22:38:29.6148 Info Shutdown() called. Logger closing...
+2025-07-11 22:38:29.6148 Info Closing old configuration.
+2025-07-11 22:38:29.6148 Debug LogFactory Flush with timeout=15 secs
+2025-07-11 22:38:29.6148 Trace Flushing all 1 targets...
+2025-07-11 22:38:29.6148 Trace ForEachItemInParallel() 1 items
+2025-07-11 22:38:29.6148 Trace FileTarget(Name=logfile): FlushAsync
+2025-07-11 22:38:29.6148 Trace Continuation invoked: 
+2025-07-11 22:38:29.6148 Trace Parallel task completed. 0 items remaining
+2025-07-11 22:38:29.6148 Debug Flush completed
+2025-07-11 22:38:29.6148 Trace FileTarget(Name=logfile): FlushAsync Done
+2025-07-11 22:38:29.6148 Debug Closing logging configuration...
+2025-07-11 22:38:29.6148 Trace Closing FileTarget(Name=logfile)
+2025-07-11 22:38:29.6311 Debug FileTarget(Name=logfile): Closing...
+2025-07-11 22:38:29.6311 Trace FileTarget(Name=logfile): FinalizeFile 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log, isArchiving: False'
+2025-07-11 22:38:29.6311 Debug FileTarget(Name=logfile): FileAppender Invalidate Closing File: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log'
+2025-07-11 22:38:29.6311 Debug FileTarget(Name=logfile): Closed.
+2025-07-11 22:38:29.6311 Trace Closing logs/${shortdate}.log
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${shortdate}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:29.6311 Trace Closing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${longdate}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${uppercase}
+2025-07-11 22:38:29.6311 Trace Closing ${level}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${level}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${loggername}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${message}
+2025-07-11 22:38:29.6311 Trace Closing Layout Renderer: ${exception}
+2025-07-11 22:38:29.6311 Debug Finished closing logging configuration.
+2025-07-11 22:38:29.6311 Debug Stop watching file-filter 'NLog.config' in directory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0
+2025-07-11 22:38:29.6311 Info Logger has been closed down.
+2025-07-11 22:38:42.7804 Debug Message Template Auto Format enabled
+2025-07-11 22:38:42.7956 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.7956 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:42.7956 Debug FileTarget FilePathLayout with FilePathKind.Relative using AppDomain.BaseDirectory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\
+2025-07-11 22:38:42.7956 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.7956 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:42.7956 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.7956 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:42.7956 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.7956 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:42.7956 Trace  Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:42.7956 Trace  Scanning SimpleLayout '${level}'
+2025-07-11 22:38:42.7956 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.7956 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:42.7956 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.7956 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:42.7956 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.7956 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:42.8050 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.8050 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:42.8050 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:42.8050 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2025-07-11 22:38:42.8050 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-07-11 22:38:42.8050 Trace ParseRulesElement
+2025-07-11 22:38:42.8050 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.5.0.3962. Product version: 5.5.0+1873145cbc26e0312d9481234d69ce7dc68aac4e. GlobalAssemblyCache: False
+2025-07-11 22:38:42.8050 Debug Start watching file-filter 'NLog.config' in directory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0
+2025-07-11 22:38:42.8050 Debug --- NLog configuration dump ---
+2025-07-11 22:38:42.8050 Debug Targets:
+2025-07-11 22:38:42.8050 Debug FileTarget(Name=logfile)
+2025-07-11 22:38:42.8050 Debug Rules:
+2025-07-11 22:38:42.8050 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2025-07-11 22:38:42.8050 Debug --- End of NLog configuration dump ---
+2025-07-11 22:38:42.8050 Trace FindReachableObject<System.Object>:
+2025-07-11 22:38:42.8050 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-11 22:38:42.8050 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-11 22:38:42.8050 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:42.8050 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:42.8050 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-11 22:38:42.8050 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8050 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:42.8050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8185 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-11 22:38:42.8185 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8185 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:42.8185 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:42.8185 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8185 Trace     Scanning SimpleLayout '${level}'
+2025-07-11 22:38:42.8185 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8185 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:42.8185 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:42.8185 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:42.8185 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:42.8185 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:42.8185 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-11 22:38:42.8185 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-11 22:38:42.8185 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-11 22:38:42.8185 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2025-07-11 22:38:42.8185 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${exception}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${message}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${loggername}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${level}
+2025-07-11 22:38:42.8185 Trace Initializing ${level}
+2025-07-11 22:38:42.8185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.8185 Trace Scanning SimpleLayout '${level}'
+2025-07-11 22:38:42.8185 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8185 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${longdate}
+2025-07-11 22:38:42.8185 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-11 22:38:42.8185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.8185 Trace Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-11 22:38:42.8185 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8185 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:42.8185 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:42.8185 Trace   Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8185 Trace   Scanning SimpleLayout '${level}'
+2025-07-11 22:38:42.8185 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8185 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:42.8185 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:42.8185 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:42.8185 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:42.8185 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-11 22:38:42.8185 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8185 Trace Initializing logs/${shortdate}.log
+2025-07-11 22:38:42.8185 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-11 22:38:42.8185 Trace Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-11 22:38:42.8185 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8185 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:42.8185 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8185 Trace Initializing FileTarget(Name=logfile)
+2025-07-11 22:38:42.8185 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-11 22:38:42.8185 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:42.8185 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:42.8185 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8185 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-11 22:38:42.8185 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2025-07-11 22:38:42.8185 Info Configuration initialized.
+2025-07-11 22:38:42.8355 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-11 22:38:42.8355 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-11 22:38:42.8355 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-11 22:38:42.8355 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-11 22:38:42.8355 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-11 22:38:42.8928 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2025-07-11 22:38:42.8928 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2025-07-11 22:38:42.8928 Trace FindReachableObject<System.Object>:
+2025-07-11 22:38:42.8928 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-11 22:38:42.8928 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-11 22:38:42.8928 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:42.8928 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:42.8928 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-11 22:38:42.8928 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8928 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8928 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-11 22:38:42.8928 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8928 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8928 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-11 22:38:42.8928 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8928 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-11 22:38:42.8962 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8962 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-11 22:38:42.8962 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8962 Trace     Scanning SimpleLayout '${level}'
+2025-07-11 22:38:42.8962 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-11 22:38:42.8962 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-11 22:38:42.8962 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8962 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-11 22:38:42.8962 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-11 22:38:42.8962 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-11 22:38:42.8962 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-11 22:38:42.8962 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-11 22:38:42.8962 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-11 22:38:42.8962 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-11 22:38:42.8962 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${exception}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${message}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${loggername}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${level}
+2025-07-11 22:38:42.8962 Trace Initializing ${level}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${longdate}
+2025-07-11 22:38:42.8962 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-11 22:38:42.8962 Trace Initializing Layout Renderer: ${literal}
+2025-07-11 22:38:42.8962 Trace Initializing logs/${shortdate}.log
+2025-07-11 22:38:42.8962 Trace Initializing FileTarget(Name=logfile)
+2025-07-11 22:38:42.8962 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-11 22:38:42.8962 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-11 22:38:42.8962 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-11 22:38:42.8962 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-11 22:38:42.8962 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-11 22:38:42.8962 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-11 22:38:42.8962 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-11 22:38:42.8962 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-11 22:38:42.8962 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-11 22:38:42.8962 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-11 22:38:42.8962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logfile
+2025-07-11 22:38:42.8962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logfile
+2025-07-11 22:38:42.8962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Hosting.Lifetime [Info] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Hosting.Lifetime [Error] => logfile
+2025-07-11 22:38:42.8962 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logfile
+2025-07-11 22:38:42.9325 Debug FileTarget(Name=logfile): Preparing for new file: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log'
+2025-07-11 22:38:42.9325 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-07.log [SeqNo=0 and FileTimeUtc=2025-07-07 23:58:06Z]
+2025-07-11 22:38:42.9325 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-08.log [SeqNo=0 and FileTimeUtc=2025-07-08 00:02:32Z]
+2025-07-11 22:38:42.9325 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-09.log [SeqNo=0 and FileTimeUtc=2025-07-09 00:11:55Z]
+2025-07-11 22:38:42.9325 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-10.log [SeqNo=0 and FileTimeUtc=2025-07-10 12:33:28Z]
+2025-07-11 22:38:42.9325 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-11.log [SeqNo=0 and FileTimeUtc=2025-07-11 00:42:02Z]
+2025-07-11 22:38:42.9325 Debug FileTarget(Name=logfile): Creating file appender: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log'
+2025-07-11 22:38:42.9432 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log with allowFileSharedWriting=False
+2025-07-11 22:38:42.9432 Info Shutdown() called. Logger closing...
+2025-07-11 22:38:42.9432 Info Closing old configuration.
+2025-07-11 22:38:42.9432 Debug LogFactory Flush with timeout=15 secs
+2025-07-11 22:38:42.9432 Trace Flushing all 1 targets...
+2025-07-11 22:38:42.9432 Trace ForEachItemInParallel() 1 items
+2025-07-11 22:38:42.9432 Trace FileTarget(Name=logfile): FlushAsync
+2025-07-11 22:38:42.9432 Trace Continuation invoked: 
+2025-07-11 22:38:42.9432 Trace Parallel task completed. 0 items remaining
+2025-07-11 22:38:42.9432 Debug Flush completed
+2025-07-11 22:38:42.9432 Trace FileTarget(Name=logfile): FlushAsync Done
+2025-07-11 22:38:42.9432 Debug Closing logging configuration...
+2025-07-11 22:38:42.9432 Trace Closing FileTarget(Name=logfile)
+2025-07-11 22:38:42.9432 Debug FileTarget(Name=logfile): Closing...
+2025-07-11 22:38:42.9432 Trace FileTarget(Name=logfile): FinalizeFile 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log, isArchiving: False'
+2025-07-11 22:38:42.9432 Debug FileTarget(Name=logfile): FileAppender Invalidate Closing File: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-11.log'
+2025-07-11 22:38:42.9432 Debug FileTarget(Name=logfile): Closed.
+2025-07-11 22:38:42.9432 Trace Closing logs/${shortdate}.log
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${shortdate}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:42.9432 Trace Closing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${longdate}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${uppercase}
+2025-07-11 22:38:42.9432 Trace Closing ${level}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${level}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${loggername}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${literal}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${message}
+2025-07-11 22:38:42.9432 Trace Closing Layout Renderer: ${exception}
+2025-07-11 22:38:42.9432 Debug Finished closing logging configuration.
+2025-07-11 22:38:42.9432 Debug Stop watching file-filter 'NLog.config' in directory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0
+2025-07-11 22:38:42.9432 Info Logger has been closed down.

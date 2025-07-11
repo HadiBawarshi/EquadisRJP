@@ -1,8 +1,12 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Dtos.AuditEvent;
+using EquadisRJP.Application.Services;
+using EquadisRJP.Domain.Entities;
 using EquadisRJP.Domain.Errors;
 using EquadisRJP.Domain.Primitives;
 using EquadisRJP.Domain.Repositories;
 using MediatR;
+using System.Text.Json;
 using static EquadisRJP.Domain.Entities.Partnership;
 
 namespace EquadisRJP.Application.Handlers
@@ -11,11 +15,13 @@ namespace EquadisRJP.Application.Handlers
     {
         private readonly IPartnershipRepository _repo;
         private readonly IUnitOfWork _uow;
+        private readonly IAuditService _auditLogger;
 
-        public ExpirePartnershipCommandHandler(IPartnershipRepository repo, IUnitOfWork uow)
+        public ExpirePartnershipCommandHandler(IPartnershipRepository repo, IUnitOfWork uow, IAuditService auditLogger)
         {
             _repo = repo;
             _uow = uow;
+            _auditLogger = auditLogger;
         }
 
         public async Task<Result> Handle(ExpirePartnershipCommand rq, CancellationToken ct)
@@ -32,6 +38,16 @@ namespace EquadisRJP.Application.Handlers
 
             partnership.Expire();
             await _uow.SaveChangesAsync(ct);
+
+            PartnershipAuditDto auditDto = new PartnershipAuditDto(rq.SupplierId, partnership.RetailerId, (int)PartnershipStatus.Active, (int)PartnershipStatus.Expired, DateTime.UtcNow);
+
+            await _auditLogger.LogAsync(
+                rq.SupplierId.ToString(),
+                "Expire-Partnership",
+                nameof(Partnership),
+                partnership.Id,
+                JsonSerializer.Serialize(auditDto)
+            );
 
             return Result.Success();
         }

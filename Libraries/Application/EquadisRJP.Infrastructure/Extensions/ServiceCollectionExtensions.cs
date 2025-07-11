@@ -34,6 +34,7 @@ namespace EquadisRJP.Infrastructure.Extensions
             services.AddScoped<IPartnershipRepository, PartnershipRepository>();
             services.AddScoped<IOfferRepository, OfferRepository>();
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+            services.AddScoped<IAuditLogRepository, AuditLogRepository>();
 
 
         }
