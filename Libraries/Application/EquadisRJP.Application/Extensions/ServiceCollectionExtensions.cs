@@ -1,4 +1,5 @@
 ﻿using EquadisRJP.Application.Behaviour;
+using EquadisRJP.Application.Services;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +20,9 @@ namespace EquadisRJP.Application.Extensions
 
             }, Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+
+
+            services.AddScoped<IAuditService, AuditService>();
         }
     }
 }

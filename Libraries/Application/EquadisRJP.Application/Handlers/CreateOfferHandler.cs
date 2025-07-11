@@ -1,8 +1,10 @@
 ﻿using EquadisRJP.Application.Commands;
+using EquadisRJP.Application.Services;
 using EquadisRJP.Domain.Entities;
 using EquadisRJP.Domain.Primitives;
 using EquadisRJP.Domain.Repositories;
 using MediatR;
+using System.Text.Json;
 
 namespace EquadisRJP.Application.Handlers
 {
@@ -10,11 +12,13 @@ namespace EquadisRJP.Application.Handlers
     {
         private readonly IOfferRepository _repo;
         private readonly IUnitOfWork _uow;
+        private readonly IAuditService _auditLogger;
 
-        public CreateOfferHandler(IOfferRepository repo, IUnitOfWork uow)
+        public CreateOfferHandler(IOfferRepository repo, IUnitOfWork uow, IAuditService auditLogger)
         {
             _repo = repo;
             _uow = uow;
+            _auditLogger = auditLogger;
         }
 
         public async Task<Result<int>> Handle(CreateOfferCommand rq, CancellationToken ct)
@@ -25,6 +29,14 @@ namespace EquadisRJP.Application.Handlers
 
             await _repo.AddAsync(offer, ct);
             await _uow.SaveChangesAsync(ct);
+
+
+            await _auditLogger.LogAsync(
+                rq.SupplierId.ToString(),
+                "Create-CommercialOffer",
+                nameof(CommercialOffer),
+                offer.Id,
+                JsonSerializer.Serialize(offer));
 
             return Result.Success(offer.Id);
         }

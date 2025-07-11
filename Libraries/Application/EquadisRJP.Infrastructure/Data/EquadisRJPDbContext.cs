@@ -29,6 +29,7 @@ public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
 
     public virtual DbSet<Supplier> Suppliers { get; set; }
 
+    public virtual DbSet<AuditLog> AuditLogs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -109,6 +110,31 @@ public partial class EquadisRJPDbContext : DbContext, IUnitOfWork
             entity.HasOne(d => d.Country).WithMany(p => p.Suppliers)
                 .HasForeignKey(d => d.CountryId)
                 .HasConstraintName("FK_Supplier_Country");
+        });
+
+
+        modelBuilder.Entity<AuditLog>(entity =>
+        {
+            entity.ToTable("AuditLogs");
+
+            entity.Property(e => e.ActorId)
+                  .IsRequired()
+                  .HasMaxLength(450);
+
+            entity.Property(e => e.Action)
+                  .IsRequired()
+                  .HasMaxLength(511);
+
+            entity.Property(e => e.EntityType)
+                  .IsRequired()
+                  .HasMaxLength(511);
+
+            entity.Property(e => e.Data)
+                  .HasColumnType("nvarchar(max)");
+
+            // Optional: configure CreatedDate to have default SQL value on insert
+            entity.Property(e => e.CreatedDate)
+                  .HasDefaultValueSql("GETUTCDATE()");
         });
 
         OnModelCreatingPartial(modelBuilder);

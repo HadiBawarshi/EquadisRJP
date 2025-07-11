@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{02
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquadisRJP.IdentityAuth.Public", "Libraries\Identity\EquadisRJP.IdentityAuth.Public\EquadisRJP.IdentityAuth.Public.csproj", "{74F0AF7F-44F5-4301-86B1-27F161C691CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{348CB64D-1A04-442E-8F8A-AFF99600BAFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{74F0AF7F-44F5-4301-86B1-27F161C691CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F0AF7F-44F5-4301-86B1-27F161C691CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74F0AF7F-44F5-4301-86B1-27F161C691CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348CB64D-1A04-442E-8F8A-AFF99600BAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348CB64D-1A04-442E-8F8A-AFF99600BAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348CB64D-1A04-442E-8F8A-AFF99600BAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348CB64D-1A04-442E-8F8A-AFF99600BAFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
