@@ -26,7 +26,10 @@ namespace EquadisRJP.Application.Handlers
 
         public async Task<Result> Handle(StartPartnershipCommand rq, CancellationToken ct)
         {
-            // Optional: prevent duplicate active partnerships
+
+            if (!await _repository.RetailerExist(rq.RetailerId))
+                return Result.Failure(DomainErrors.Retailer.NotFound);
+
             if (await _repository.ExistsActiveAsync(rq.SupplierId, rq.RetailerId))
                 return Result.Failure(DomainErrors.Partnership.AlreadyExists);
 
