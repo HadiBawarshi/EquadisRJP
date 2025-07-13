@@ -28,7 +28,7 @@ namespace EquadisRJP.Service.Controllers
 
 
         [Authorize(Roles = "Supplier")]
-        [HttpPut("{id:int}")]
+        [HttpPut()]
         public async Task<IActionResult> UpdateOffer([FromBody] UpdateOfferDto dto)
         {
 

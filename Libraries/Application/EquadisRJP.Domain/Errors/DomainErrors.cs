@@ -64,6 +64,18 @@ namespace EquadisRJP.Domain.Errors
                 "Offer.InvalidDiscountValue",
                 "Discount value must be between 0 and 100",
                 ErrorType.Validation);
+
+
+            public static readonly Error InvalidDateRange =
+    Error.Validation("Offer.InvalidDates", "ValidFrom must be earlier than ValidTo.");
+
+            public static readonly Error InvalidDiscount =
+                Error.Validation("Offer.InvalidDiscount", "Discount must be between 1 and 100.");
+
+            public static readonly Error InvalidSupplier =
+                Error.Validation("Offer.InvalidSupplier", "SupplierId must be a positive value.");
+
+
         }
 
 
