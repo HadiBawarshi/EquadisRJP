@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8000:8080"
+  identityauth:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "9000:8080"

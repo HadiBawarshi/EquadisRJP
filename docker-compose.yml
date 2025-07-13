@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  webapi:
+    container_name: equadisrjp.service
+    build:
+      context: .
+      dockerfile: Services/EquadisRJP.Service/Dockerfile
+    ports:
+      - "8000:8080"
+    environment:
+      
+      - ConnectionStrings__DefaultConnection=Server=mssql,1433;Database=RjpDb;User=sa;Password=P@ssw0rd123!;Encrypt=True;TrustServerCertificate=True
+
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - mssql
+
+  identityauth:
+    container_name: equadisrjp.identityauth
+    build:
+      context: .
+      dockerfile: Services/EquadisRJP.IdentityAuth/Dockerfile
+    ports:
+      - "9009:8080" 
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=mssql,1433;Database=RjpDb;User=sa;Password=P@ssw0rd123!;Encrypt=True;TrustServerCertificate=True
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - mssql
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=P@ssw0rd123!
+    volumes:
+      - sqlvolume:/var/opt/mssql
+
+volumes:
+  sqlvolume:
