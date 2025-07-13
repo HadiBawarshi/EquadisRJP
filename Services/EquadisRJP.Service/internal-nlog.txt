@@ -33335,3 +33335,1098 @@
 2025-07-12 23:33:28.0862 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-12.log with allowFileSharedWriting=False
 2025-07-12 23:33:28.0862 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-12.log with allowFileSharedWriting=False
 2025-07-12 23:33:28.0862 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-12.log with allowFileSharedWriting=False
+2025-07-13 15:05:34.7341 Debug Message Template Auto Format enabled
+2025-07-13 15:05:34.7622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7622 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:05:34.7622 Debug FileTarget FilePathLayout with FilePathKind.Relative using AppDomain.BaseDirectory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\
+2025-07-13 15:05:34.7622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7622 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:05:34.7622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7622 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:05:34.7622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7622 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:05:34.7622 Trace  Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:05:34.7622 Trace  Scanning SimpleLayout '${level}'
+2025-07-13 15:05:34.7622 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.7622 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:05:34.7622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7622 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:05:34.7622 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7622 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:05:34.7753 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.7753 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:05:34.7753 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:05:34.7753 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2025-07-13 15:05:34.7753 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-07-13 15:05:34.7753 Trace ParseRulesElement
+2025-07-13 15:05:34.7753 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.5.0.3962. Product version: 5.5.0+1873145cbc26e0312d9481234d69ce7dc68aac4e. GlobalAssemblyCache: False
+2025-07-13 15:05:34.7910 Debug Start watching file-filter 'NLog.config' in directory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0
+2025-07-13 15:05:34.7910 Debug --- NLog configuration dump ---
+2025-07-13 15:05:34.7910 Debug Targets:
+2025-07-13 15:05:34.7910 Debug FileTarget(Name=logfile)
+2025-07-13 15:05:34.7910 Debug Rules:
+2025-07-13 15:05:34.7910 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2025-07-13 15:05:34.7910 Debug --- End of NLog configuration dump ---
+2025-07-13 15:05:34.7910 Trace FindReachableObject<System.Object>:
+2025-07-13 15:05:34.7910 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-13 15:05:34.7910 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-13 15:05:34.7910 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:05:34.7910 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:05:34.7910 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-13 15:05:34.7910 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.7910 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.7910 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:05:34.7910 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8671 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:05:34.8671 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-13 15:05:34.8671 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.8671 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:05:34.8671 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8671 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:05:34.8671 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:05:34.8671 Trace     Scanning SimpleLayout '${level}'
+2025-07-13 15:05:34.8671 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.8671 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:05:34.8671 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8671 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:05:34.8671 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8671 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:05:34.8671 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:05:34.8671 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:05:34.8671 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-13 15:05:34.8671 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-13 15:05:34.8671 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-13 15:05:34.8671 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2025-07-13 15:05:34.8932 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2025-07-13 15:05:34.8932 Trace Initializing Layout Renderer: ${exception}
+2025-07-13 15:05:34.8932 Trace Initializing Layout Renderer: ${message}
+2025-07-13 15:05:34.8932 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:34.8932 Trace Initializing Layout Renderer: ${loggername}
+2025-07-13 15:05:34.8932 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:34.8932 Trace Initializing Layout Renderer: ${level}
+2025-07-13 15:05:34.8932 Trace Initializing ${level}
+2025-07-13 15:05:34.8932 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.8964 Trace Scanning SimpleLayout '${level}'
+2025-07-13 15:05:34.8964 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.8964 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:05:34.8964 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-13 15:05:34.8964 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:34.8964 Trace Initializing Layout Renderer: ${longdate}
+2025-07-13 15:05:34.8964 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-13 15:05:34.8964 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.8964 Trace Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-13 15:05:34.8964 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.8964 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:05:34.8964 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8964 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:05:34.8964 Trace   Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:05:34.8964 Trace   Scanning SimpleLayout '${level}'
+2025-07-13 15:05:34.8964 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.8964 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:05:34.8964 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8964 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:05:34.8964 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8964 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:05:34.8964 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:05:34.8964 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:05:34.8964 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:34.8964 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-13 15:05:34.8964 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:34.8964 Trace Initializing logs/${shortdate}.log
+2025-07-13 15:05:34.8964 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:05:34.8964 Trace Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-13 15:05:34.8964 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:34.8964 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8964 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:05:34.8964 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:34.8964 Trace Initializing FileTarget(Name=logfile)
+2025-07-13 15:05:34.8964 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-13 15:05:34.8964 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:05:34.8964 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:05:34.8964 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:05:34.8964 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-13 15:05:34.8964 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2025-07-13 15:05:34.8964 Info Configuration initialized.
+2025-07-13 15:05:35.0656 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-13 15:05:35.0660 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-13 15:05:35.0660 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-13 15:05:35.0660 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-13 15:05:35.0660 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-13 15:05:38.9711 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2025-07-13 15:05:38.9711 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2025-07-13 15:05:38.9711 Trace FindReachableObject<System.Object>:
+2025-07-13 15:05:38.9711 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-13 15:05:38.9753 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-13 15:05:38.9753 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:05:38.9753 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:05:38.9753 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-13 15:05:38.9753 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:38.9753 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:38.9753 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:05:38.9753 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:38.9753 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:05:38.9753 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-13 15:05:38.9753 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:38.9753 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:05:38.9753 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:38.9753 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:05:38.9753 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:05:38.9753 Trace     Scanning SimpleLayout '${level}'
+2025-07-13 15:05:38.9753 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:05:38.9753 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:05:38.9753 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:38.9753 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:05:38.9753 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:05:38.9753 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:05:38.9753 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:05:38.9753 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:05:38.9753 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-13 15:05:38.9753 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-13 15:05:38.9753 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${exception}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${message}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${loggername}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${level}
+2025-07-13 15:05:38.9753 Trace Initializing ${level}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${longdate}
+2025-07-13 15:05:38.9753 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-13 15:05:38.9753 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:05:38.9753 Trace Initializing logs/${shortdate}.log
+2025-07-13 15:05:38.9753 Trace Initializing FileTarget(Name=logfile)
+2025-07-13 15:05:38.9753 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-13 15:05:38.9753 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:05:38.9753 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:05:38.9753 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:05:38.9753 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-13 15:05:38.9753 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-13 15:05:38.9753 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-13 15:05:38.9753 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-13 15:05:38.9753 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-13 15:05:38.9753 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-13 15:05:39.0126 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logfile
+2025-07-13 15:05:39.0126 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logfile
+2025-07-13 15:05:39.0126 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Hosting.Lifetime [Info] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Hosting.Lifetime [Error] => logfile
+2025-07-13 15:05:39.0126 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logfile
+2025-07-13 15:05:39.1023 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => logfile
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => logfile
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => logfile
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => logfile
+2025-07-13 15:05:39.1023 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => logfile
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => logfile
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => logfile
+2025-07-13 15:05:39.1023 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => logfile
+2025-07-13 15:05:39.4555 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2025-07-13 15:05:39.4555 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Info] => logfile
+2025-07-13 15:05:39.4555 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Warn] => logfile
+2025-07-13 15:05:39.4555 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Error] => logfile
+2025-07-13 15:05:39.4555 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Fatal] => logfile
+2025-07-13 15:05:39.4962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => logfile
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => logfile
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => logfile
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => logfile
+2025-07-13 15:05:39.4962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => logfile
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => logfile
+2025-07-13 15:05:39.4962 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => logfile
+2025-07-13 15:05:39.5291 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => logfile
+2025-07-13 15:05:39.5291 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2025-07-13 15:05:39.5291 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => logfile
+2025-07-13 15:05:39.5291 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => logfile
+2025-07-13 15:05:39.5291 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => logfile
+2025-07-13 15:05:39.5291 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => logfile
+2025-07-13 15:05:39.5291 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2025-07-13 15:05:39.5291 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => logfile
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => logfile
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => logfile
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => logfile
+2025-07-13 15:05:39.5316 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => logfile
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => logfile
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => logfile
+2025-07-13 15:05:39.5316 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => logfile
+2025-07-13 15:05:39.7279 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service
+2025-07-13 15:05:39.7282 Debug Logger EquadisRJP.Service [Info] => logfile
+2025-07-13 15:05:39.7282 Debug Logger EquadisRJP.Service [Warn] => logfile
+2025-07-13 15:05:39.7282 Debug Logger EquadisRJP.Service [Error] => logfile
+2025-07-13 15:05:39.7282 Debug Logger EquadisRJP.Service [Fatal] => logfile
+2025-07-13 15:05:40.4036 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2025-07-13 15:05:40.4036 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => logfile
+2025-07-13 15:05:40.4036 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => logfile
+2025-07-13 15:05:40.4036 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => logfile
+2025-07-13 15:05:40.4036 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => logfile
+2025-07-13 15:05:41.1512 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2025-07-13 15:05:41.1512 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Info] => logfile
+2025-07-13 15:05:41.1512 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Warn] => logfile
+2025-07-13 15:05:41.1512 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Error] => logfile
+2025-07-13 15:05:41.1512 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Fatal] => logfile
+2025-07-13 15:05:41.1642 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => logfile
+2025-07-13 15:05:41.1642 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => logfile
+2025-07-13 15:05:41.1642 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => logfile
+2025-07-13 15:05:41.1642 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => logfile
+2025-07-13 15:05:41.4784 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.TypeForwardingActivator
+2025-07-13 15:05:41.4784 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Info] => logfile
+2025-07-13 15:05:41.4784 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Warn] => logfile
+2025-07-13 15:05:41.4784 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Error] => logfile
+2025-07-13 15:05:41.4784 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Fatal] => logfile
+2025-07-13 15:05:41.5321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Info] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Warn] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Error] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Fatal] => logfile
+2025-07-13 15:05:41.5321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Info] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Warn] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Error] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Fatal] => logfile
+2025-07-13 15:05:41.5321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Info] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Warn] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Error] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Fatal] => logfile
+2025-07-13 15:05:41.5321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Info] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Warn] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Error] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Fatal] => logfile
+2025-07-13 15:05:41.5321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Info] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Warn] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Error] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Fatal] => logfile
+2025-07-13 15:05:41.5321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Info] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Warn] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Error] => logfile
+2025-07-13 15:05:41.5321 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Fatal] => logfile
+2025-07-13 15:05:41.7637 Debug FileTarget(Name=logfile): Preparing for new file: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log'
+2025-07-13 15:05:41.7637 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-07.log [SeqNo=0 and FileTimeUtc=2025-07-07 23:58:06Z]
+2025-07-13 15:05:41.7637 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-08.log [SeqNo=0 and FileTimeUtc=2025-07-08 00:02:32Z]
+2025-07-13 15:05:41.7637 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-09.log [SeqNo=0 and FileTimeUtc=2025-07-09 00:11:55Z]
+2025-07-13 15:05:41.7637 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-10.log [SeqNo=0 and FileTimeUtc=2025-07-10 12:33:28Z]
+2025-07-13 15:05:41.7637 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-11.log [SeqNo=0 and FileTimeUtc=2025-07-11 00:42:02Z]
+2025-07-13 15:05:41.7637 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-12.log [SeqNo=0 and FileTimeUtc=2025-07-12 23:23:20Z]
+2025-07-13 15:05:41.7637 Debug FileTarget(Name=logfile): Creating file appender: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log'
+2025-07-13 15:05:41.8893 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:41.8893 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Info] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Warn] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Error] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Fatal] => logfile
+2025-07-13 15:05:41.8893 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Info] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Warn] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Error] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Fatal] => logfile
+2025-07-13 15:05:41.8893 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Info] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Warn] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Error] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Fatal] => logfile
+2025-07-13 15:05:41.8893 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => logfile
+2025-07-13 15:05:41.8893 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => logfile
+2025-07-13 15:05:42.1293 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor
+2025-07-13 15:05:42.1673 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Info] => logfile
+2025-07-13 15:05:42.1673 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Warn] => logfile
+2025-07-13 15:05:42.1673 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Error] => logfile
+2025-07-13 15:05:42.1673 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Fatal] => logfile
+2025-07-13 15:05:42.1769 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware
+2025-07-13 15:05:42.1769 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Info] => logfile
+2025-07-13 15:05:42.1769 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Warn] => logfile
+2025-07-13 15:05:42.1769 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Error] => logfile
+2025-07-13 15:05:42.1769 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Fatal] => logfile
+2025-07-13 15:05:42.1769 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware
+2025-07-13 15:05:42.1769 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Info] => logfile
+2025-07-13 15:05:42.1769 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Warn] => logfile
+2025-07-13 15:05:42.2212 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Error] => logfile
+2025-07-13 15:05:42.2212 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Fatal] => logfile
+2025-07-13 15:05:42.2365 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => logfile
+2025-07-13 15:05:42.2365 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Info] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Warn] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Error] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Fatal] => logfile
+2025-07-13 15:05:42.2365 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => logfile
+2025-07-13 15:05:42.2365 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => logfile
+2025-07-13 15:05:42.2365 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => logfile
+2025-07-13 15:05:42.2770 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2025-07-13 15:05:42.2770 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => logfile
+2025-07-13 15:05:42.2770 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => logfile
+2025-07-13 15:05:42.2770 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => logfile
+2025-07-13 15:05:42.2770 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => logfile
+2025-07-13 15:05:43.1806 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2025-07-13 15:05:43.1806 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => logfile
+2025-07-13 15:05:43.1806 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => logfile
+2025-07-13 15:05:43.1806 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => logfile
+2025-07-13 15:05:43.1806 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => logfile
+2025-07-13 15:05:43.2679 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware
+2025-07-13 15:05:43.2679 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Info] => logfile
+2025-07-13 15:05:43.2962 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Warn] => logfile
+2025-07-13 15:05:43.2962 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Error] => logfile
+2025-07-13 15:05:43.2962 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Fatal] => logfile
+2025-07-13 15:05:43.2962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2025-07-13 15:05:43.2962 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => logfile
+2025-07-13 15:05:43.2962 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => logfile
+2025-07-13 15:05:43.2962 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => logfile
+2025-07-13 15:05:43.2962 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => logfile
+2025-07-13 15:05:43.3003 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware
+2025-07-13 15:05:43.3003 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Info] => logfile
+2025-07-13 15:05:43.3003 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Warn] => logfile
+2025-07-13 15:05:43.3003 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Error] => logfile
+2025-07-13 15:05:43.3003 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Fatal] => logfile
+2025-07-13 15:05:43.5805 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Info] => logfile
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Warn] => logfile
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Error] => logfile
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Fatal] => logfile
+2025-07-13 15:05:43.5805 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Info] => logfile
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Warn] => logfile
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Error] => logfile
+2025-07-13 15:05:43.5805 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Fatal] => logfile
+2025-07-13 15:05:44.6858 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2025-07-13 15:05:44.6858 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => logfile
+2025-07-13 15:05:44.6858 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => logfile
+2025-07-13 15:05:44.6858 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => logfile
+2025-07-13 15:05:44.6858 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => logfile
+2025-07-13 15:05:47.6237 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:47.6801 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:47.6801 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:47.6801 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:49.7346 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:50.2215 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:50.6135 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:50.6184 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:50.7074 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:51.3136 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:51.3775 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:05:51.3839 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:28.3943 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:28.7041 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:28.7498 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2025-07-13 15:21:28.7498 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => logfile
+2025-07-13 15:21:28.7498 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => logfile
+2025-07-13 15:21:28.7498 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => logfile
+2025-07-13 15:21:28.7498 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => logfile
+2025-07-13 15:21:29.7513 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2025-07-13 15:21:29.7513 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => logfile
+2025-07-13 15:21:29.7513 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => logfile
+2025-07-13 15:21:29.7513 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => logfile
+2025-07-13 15:21:29.7513 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => logfile
+2025-07-13 15:21:29.8272 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Caching.Memory.MemoryCache
+2025-07-13 15:21:29.8475 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Info] => logfile
+2025-07-13 15:21:29.8507 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Warn] => logfile
+2025-07-13 15:21:29.8507 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Error] => logfile
+2025-07-13 15:21:29.8507 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Fatal] => logfile
+2025-07-13 15:21:29.9002 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler
+2025-07-13 15:21:29.9002 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Info] => logfile
+2025-07-13 15:21:29.9002 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Warn] => logfile
+2025-07-13 15:21:29.9252 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Error] => logfile
+2025-07-13 15:21:29.9252 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Fatal] => logfile
+2025-07-13 15:21:31.9610 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Info] => logfile
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Warn] => logfile
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Error] => logfile
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Fatal] => logfile
+2025-07-13 15:21:31.9610 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:31.9610 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => logfile
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => logfile
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => logfile
+2025-07-13 15:21:31.9610 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => logfile
+2025-07-13 15:21:31.9610 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2025-07-13 15:21:31.9739 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => logfile
+2025-07-13 15:21:31.9739 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => logfile
+2025-07-13 15:21:31.9739 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => logfile
+2025-07-13 15:21:31.9739 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => logfile
+2025-07-13 15:21:31.9963 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Info] => logfile
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Warn] => logfile
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Error] => logfile
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Fatal] => logfile
+2025-07-13 15:21:31.9963 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Info] => logfile
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Warn] => logfile
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Error] => logfile
+2025-07-13 15:21:31.9963 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Fatal] => logfile
+2025-07-13 15:21:32.0054 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:47.9835 Debug Targets configured when LogLevel >= Info for Logger: System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Info] => logfile
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Warn] => logfile
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Error] => logfile
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Fatal] => logfile
+2025-07-13 15:21:47.9835 Debug Targets configured when LogLevel >= Info for Logger: System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Info] => logfile
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Warn] => logfile
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Error] => logfile
+2025-07-13 15:21:47.9835 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Fatal] => logfile
+2025-07-13 15:21:47.9939 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Infrastructure.Repositories.IdentityAuthClient
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Info] => logfile
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Warn] => logfile
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Error] => logfile
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Fatal] => logfile
+2025-07-13 15:21:47.9939 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Application.Handlers.CreateRetailerCommandHandler
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Info] => logfile
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Warn] => logfile
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Error] => logfile
+2025-07-13 15:21:47.9939 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Fatal] => logfile
+2025-07-13 15:21:50.8983 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:50.8983 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:51.0004 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:21:51.0067 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:08.4366 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:11.5243 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:11.5243 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:32.5289 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:32.5404 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:32.5991 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:22:32.5991 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:12.7388 Debug Message Template Auto Format enabled
+2025-07-13 15:24:13.1042 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1042 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:24:13.1042 Debug FileTarget FilePathLayout with FilePathKind.Relative using AppDomain.BaseDirectory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\
+2025-07-13 15:24:13.1042 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1042 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:24:13.1042 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1042 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:24:13.1042 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1042 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:24:13.1042 Trace  Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:24:13.1042 Trace  Scanning SimpleLayout '${level}'
+2025-07-13 15:24:13.1145 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.1145 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:24:13.1145 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1145 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:24:13.1145 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1145 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:24:13.1145 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.1145 Trace Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:24:13.1145 Trace  Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:24:13.1145 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2025-07-13 15:24:13.1145 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-07-13 15:24:13.1145 Trace ParseRulesElement
+2025-07-13 15:24:13.1339 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.5.0.3962. Product version: 5.5.0+1873145cbc26e0312d9481234d69ce7dc68aac4e. GlobalAssemblyCache: False
+2025-07-13 15:24:13.2451 Debug Start watching file-filter 'NLog.config' in directory: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0
+2025-07-13 15:24:13.2668 Debug --- NLog configuration dump ---
+2025-07-13 15:24:13.2668 Debug Targets:
+2025-07-13 15:24:13.2668 Debug FileTarget(Name=logfile)
+2025-07-13 15:24:13.2668 Debug Rules:
+2025-07-13 15:24:13.2668 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2025-07-13 15:24:13.2668 Debug --- End of NLog configuration dump ---
+2025-07-13 15:24:13.2723 Trace FindReachableObject<System.Object>:
+2025-07-13 15:24:13.2723 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-13 15:24:13.2723 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-13 15:24:13.2723 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:24:13.2723 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:24:13.2723 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-13 15:24:13.2723 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.2723 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.2723 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:24:13.2723 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.3989 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:24:13.3989 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-13 15:24:13.3989 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.3989 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:24:13.3989 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.3989 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:24:13.3989 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:24:13.3989 Trace     Scanning SimpleLayout '${level}'
+2025-07-13 15:24:13.3989 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.3989 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:24:13.3989 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4114 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:24:13.4114 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4114 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:24:13.4114 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:24:13.4114 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:24:13.4114 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-13 15:24:13.4114 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-13 15:24:13.4114 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-13 15:24:13.4305 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2025-07-13 15:24:13.4305 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2025-07-13 15:24:13.4472 Trace Initializing Layout Renderer: ${exception}
+2025-07-13 15:24:13.4472 Trace Initializing Layout Renderer: ${message}
+2025-07-13 15:24:13.4472 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:13.4472 Trace Initializing Layout Renderer: ${loggername}
+2025-07-13 15:24:13.4472 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:13.4472 Trace Initializing Layout Renderer: ${level}
+2025-07-13 15:24:13.4472 Trace Initializing ${level}
+2025-07-13 15:24:13.4594 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.4594 Trace Scanning SimpleLayout '${level}'
+2025-07-13 15:24:13.4594 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.4594 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:24:13.4775 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-13 15:24:13.4775 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:13.4775 Trace Initializing Layout Renderer: ${longdate}
+2025-07-13 15:24:13.4775 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-13 15:24:13.4775 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.4775 Trace Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-13 15:24:13.4775 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.4775 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:24:13.4775 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4775 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:24:13.4775 Trace   Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:24:13.4775 Trace   Scanning SimpleLayout '${level}'
+2025-07-13 15:24:13.4775 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.4775 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:24:13.4775 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4775 Trace  Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:24:13.4775 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4775 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:24:13.4775 Trace  Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:24:13.4775 Trace   Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:24:13.4775 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:13.4775 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-13 15:24:13.4775 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:13.4775 Trace Initializing logs/${shortdate}.log
+2025-07-13 15:24:13.4775 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2025-07-13 15:24:13.4775 Trace Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-13 15:24:13.4775 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:13.4775 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4775 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:24:13.4775 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:13.4775 Trace Initializing FileTarget(Name=logfile)
+2025-07-13 15:24:13.4930 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-13 15:24:13.4930 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:24:13.4930 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:24:13.4930 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:24:13.4930 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-13 15:24:13.4930 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2025-07-13 15:24:13.4930 Info Configuration initialized.
+2025-07-13 15:24:13.5280 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-13 15:24:13.5280 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-13 15:24:13.5280 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-13 15:24:13.5280 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-13 15:24:13.5280 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-13 15:24:14.7257 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2025-07-13 15:24:14.7257 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2025-07-13 15:24:14.7257 Trace FindReachableObject<System.Object>:
+2025-07-13 15:24:14.7257 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2025-07-13 15:24:14.7257 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic.IList`1[NLog.Targets.Target]
+2025-07-13 15:24:14.7257 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:24:14.7257 Trace   Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:24:14.7257 Trace   Scanning SimpleLayout 'logs/${shortdate}.log'
+2025-07-13 15:24:14.7257 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:14.7257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:14.7257 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2025-07-13 15:24:14.7257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:14.7257 Trace   Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:24:14.7257 Trace   Scanning SimpleLayout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}'
+2025-07-13 15:24:14.7257 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:14.7257 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2025-07-13 15:24:14.7257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:14.7257 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2025-07-13 15:24:14.7257 Trace     Scanning Property Inner '${level}' NLog.Layouts.Layout
+2025-07-13 15:24:14.7257 Trace     Scanning SimpleLayout '${level}'
+2025-07-13 15:24:14.7257 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic.IEnumerable`1[NLog.LayoutRenderers.LayoutRenderer]
+2025-07-13 15:24:14.7257 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2025-07-13 15:24:14.7257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:14.7257 Trace    Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${loggername}'
+2025-07-13 15:24:14.7257 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2025-07-13 15:24:14.7257 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2025-07-13 15:24:14.7257 Trace    Scanning ExceptionLayoutRenderer 'Layout Renderer: ${exception}'
+2025-07-13 15:24:14.7257 Trace     Scanning Property Formats 'System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]' System.Collections.Generic.List`1[NLog.Config.ExceptionRenderingFormat]
+2025-07-13 15:24:14.7257 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic.IList`1[NLog.Config.LoggingRule]
+2025-07-13 15:24:14.7257 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic.IList`1[NLog.Filters.Filter]
+2025-07-13 15:24:14.7257 Info Validating config: TargetNames=logfile, ConfigItems=17, FilePath=D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\NLog.config
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${exception}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${message}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${loggername}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${level}
+2025-07-13 15:24:14.7257 Trace Initializing ${level}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${uppercase}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${longdate}
+2025-07-13 15:24:14.7257 Trace Initializing ${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${shortdate}
+2025-07-13 15:24:14.7257 Trace Initializing Layout Renderer: ${literal}
+2025-07-13 15:24:14.7257 Trace Initializing logs/${shortdate}.log
+2025-07-13 15:24:14.7257 Trace Initializing FileTarget(Name=logfile)
+2025-07-13 15:24:14.7257 Trace FindReachableObject<NLog.Layouts.Layout>:
+2025-07-13 15:24:14.7257 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2025-07-13 15:24:14.7257 Trace  Scanning Property FileName 'logs/${shortdate}.log' NLog.Layouts.Layout
+2025-07-13 15:24:14.7257 Trace  Scanning Property Layout '${longdate}|${uppercase:${level}}|${logger}|${message}${exception:format=ToString}' NLog.Layouts.Layout
+2025-07-13 15:24:14.7497 Trace FileTarget(Name=logfile) has 2 layouts
+2025-07-13 15:24:14.7497 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Program
+2025-07-13 15:24:14.7497 Debug Logger EquadisRJP.Service.Program [Info] => logfile
+2025-07-13 15:24:14.7497 Debug Logger EquadisRJP.Service.Program [Warn] => logfile
+2025-07-13 15:24:14.7497 Debug Logger EquadisRJP.Service.Program [Error] => logfile
+2025-07-13 15:24:14.7554 Debug Logger EquadisRJP.Service.Program [Fatal] => logfile
+2025-07-13 15:24:14.7554 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logfile
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logfile
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logfile
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logfile
+2025-07-13 15:24:14.7554 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logfile
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logfile
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logfile
+2025-07-13 15:24:14.7554 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logfile
+2025-07-13 15:24:14.7709 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.Hosting.Lifetime [Info] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.Hosting.Lifetime [Error] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logfile
+2025-07-13 15:24:14.7709 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => logfile
+2025-07-13 15:24:14.7709 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => logfile
+2025-07-13 15:24:14.7709 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => logfile
+2025-07-13 15:24:14.8129 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Info] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Warn] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Error] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.Internal.CertificatePathWatcher [Fatal] => logfile
+2025-07-13 15:24:14.8129 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => logfile
+2025-07-13 15:24:14.8129 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => logfile
+2025-07-13 15:24:14.8129 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => logfile
+2025-07-13 15:24:14.8129 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => logfile
+2025-07-13 15:24:14.8129 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => logfile
+2025-07-13 15:24:14.8129 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => logfile
+2025-07-13 15:24:14.8174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => logfile
+2025-07-13 15:24:14.8174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => logfile
+2025-07-13 15:24:14.8392 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service
+2025-07-13 15:24:14.8392 Debug Logger EquadisRJP.Service [Info] => logfile
+2025-07-13 15:24:14.8392 Debug Logger EquadisRJP.Service [Warn] => logfile
+2025-07-13 15:24:14.8392 Debug Logger EquadisRJP.Service [Error] => logfile
+2025-07-13 15:24:14.8392 Debug Logger EquadisRJP.Service [Fatal] => logfile
+2025-07-13 15:24:14.9066 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2025-07-13 15:24:14.9066 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => logfile
+2025-07-13 15:24:14.9066 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => logfile
+2025-07-13 15:24:14.9066 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => logfile
+2025-07-13 15:24:14.9066 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => logfile
+2025-07-13 15:24:14.9616 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Info] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Warn] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Error] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider [Fatal] => logfile
+2025-07-13 15:24:14.9616 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => logfile
+2025-07-13 15:24:14.9616 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => logfile
+2025-07-13 15:24:14.9616 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => logfile
+2025-07-13 15:24:14.9616 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => logfile
+2025-07-13 15:24:15.0376 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.TypeForwardingActivator
+2025-07-13 15:24:15.0376 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Info] => logfile
+2025-07-13 15:24:15.0376 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Warn] => logfile
+2025-07-13 15:24:15.0376 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Error] => logfile
+2025-07-13 15:24:15.0376 Debug Logger Microsoft.AspNetCore.DataProtection.TypeForwardingActivator [Fatal] => logfile
+2025-07-13 15:24:15.0537 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Info] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Warn] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Error] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [Fatal] => logfile
+2025-07-13 15:24:15.0537 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Info] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Warn] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Error] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory [Fatal] => logfile
+2025-07-13 15:24:15.0537 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Info] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Warn] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Error] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory [Fatal] => logfile
+2025-07-13 15:24:15.0537 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Info] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Warn] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Error] => logfile
+2025-07-13 15:24:15.0537 Debug Logger Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory [Fatal] => logfile
+2025-07-13 15:24:15.0676 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Info] => logfile
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Warn] => logfile
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Error] => logfile
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlEncryptor [Fatal] => logfile
+2025-07-13 15:24:15.0676 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Info] => logfile
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Warn] => logfile
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Error] => logfile
+2025-07-13 15:24:15.0676 Debug Logger Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository [Fatal] => logfile
+2025-07-13 15:24:15.1310 Debug FileTarget(Name=logfile): Preparing for new file: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log'
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-07.log [SeqNo=0 and FileTimeUtc=2025-07-07 23:58:06Z]
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-08.log [SeqNo=0 and FileTimeUtc=2025-07-08 00:02:32Z]
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-09.log [SeqNo=0 and FileTimeUtc=2025-07-09 00:11:55Z]
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-10.log [SeqNo=0 and FileTimeUtc=2025-07-10 12:33:28Z]
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-11.log [SeqNo=0 and FileTimeUtc=2025-07-11 00:42:02Z]
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-12.log [SeqNo=0 and FileTimeUtc=2025-07-12 23:23:20Z]
+2025-07-13 15:24:15.1470 Trace FileTarget: Found existing archive file: D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs\2025-07-13.log [SeqNo=0 and FileTimeUtc=2025-07-13 15:05:41Z]
+2025-07-13 15:24:15.1707 Debug FileTarget(Name=logfile): Creating file appender: 'D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log'
+2025-07-13 15:24:15.1843 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:15.1843 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Info] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Warn] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Error] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver [Fatal] => logfile
+2025-07-13 15:24:15.1843 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Info] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Warn] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Error] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider [Fatal] => logfile
+2025-07-13 15:24:15.1843 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Info] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Warn] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Error] => logfile
+2025-07-13 15:24:15.1843 Debug Logger Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService [Fatal] => logfile
+2025-07-13 15:24:15.1956 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2025-07-13 15:24:15.1956 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => logfile
+2025-07-13 15:24:15.1956 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => logfile
+2025-07-13 15:24:15.1956 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => logfile
+2025-07-13 15:24:15.1956 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => logfile
+2025-07-13 15:24:15.2218 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor
+2025-07-13 15:24:15.2218 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Info] => logfile
+2025-07-13 15:24:15.2218 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Warn] => logfile
+2025-07-13 15:24:15.2218 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Error] => logfile
+2025-07-13 15:24:15.2218 Debug Logger Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor [Fatal] => logfile
+2025-07-13 15:24:15.2497 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware
+2025-07-13 15:24:15.2497 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Info] => logfile
+2025-07-13 15:24:15.2497 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Warn] => logfile
+2025-07-13 15:24:15.2497 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Error] => logfile
+2025-07-13 15:24:15.2497 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.2698 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware
+2025-07-13 15:24:15.2780 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Info] => logfile
+2025-07-13 15:24:15.2780 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Warn] => logfile
+2025-07-13 15:24:15.2780 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Error] => logfile
+2025-07-13 15:24:15.2780 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.3738 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => logfile
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => logfile
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => logfile
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.3738 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Authorization.AuthorizationMiddleware
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Info] => logfile
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Warn] => logfile
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Error] => logfile
+2025-07-13 15:24:15.3738 Debug Logger Microsoft.AspNetCore.Authorization.AuthorizationMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.3839 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => logfile
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => logfile
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => logfile
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.3839 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => logfile
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => logfile
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => logfile
+2025-07-13 15:24:15.3839 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.4305 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2025-07-13 15:24:15.4305 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => logfile
+2025-07-13 15:24:15.4305 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => logfile
+2025-07-13 15:24:15.4305 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => logfile
+2025-07-13 15:24:15.4305 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.4827 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.4827 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware
+2025-07-13 15:24:15.4827 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Info] => logfile
+2025-07-13 15:24:15.4827 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Warn] => logfile
+2025-07-13 15:24:15.4827 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Error] => logfile
+2025-07-13 15:24:15.4827 Debug Logger EquadisRJP.Service.Middlewares.ExceptionHandlingMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.4827 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.4827 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Info] => logfile
+2025-07-13 15:24:15.4827 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Warn] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Error] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.6159 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Info] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Warn] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Error] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.6159 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Info] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Warn] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Error] => logfile
+2025-07-13 15:24:15.6159 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Fatal] => logfile
+2025-07-13 15:24:15.7018 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2025-07-13 15:24:15.7018 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => logfile
+2025-07-13 15:24:15.7018 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => logfile
+2025-07-13 15:24:15.7018 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => logfile
+2025-07-13 15:24:15.7018 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => logfile
+2025-07-13 15:24:15.7765 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:15.9743 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.0092 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.0380 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.3883 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.7853 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.8127 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.8373 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:16.9212 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:17.0680 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:17.5453 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:17.5700 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:51.6676 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:51.6676 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:51.7366 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2025-07-13 15:24:51.7366 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => logfile
+2025-07-13 15:24:51.7366 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => logfile
+2025-07-13 15:24:51.7366 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => logfile
+2025-07-13 15:24:51.7366 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => logfile
+2025-07-13 15:24:52.2561 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2025-07-13 15:24:52.2561 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => logfile
+2025-07-13 15:24:52.2561 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => logfile
+2025-07-13 15:24:52.2561 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => logfile
+2025-07-13 15:24:52.2561 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => logfile
+2025-07-13 15:24:52.3385 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Caching.Memory.MemoryCache
+2025-07-13 15:24:52.3385 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Info] => logfile
+2025-07-13 15:24:52.3385 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Warn] => logfile
+2025-07-13 15:24:52.3385 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Error] => logfile
+2025-07-13 15:24:52.3385 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Fatal] => logfile
+2025-07-13 15:24:52.3709 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler
+2025-07-13 15:24:52.3709 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Info] => logfile
+2025-07-13 15:24:52.3709 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Warn] => logfile
+2025-07-13 15:24:52.3709 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Error] => logfile
+2025-07-13 15:24:52.3709 Debug Logger Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [Fatal] => logfile
+2025-07-13 15:24:52.6910 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService
+2025-07-13 15:24:52.6910 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Info] => logfile
+2025-07-13 15:24:52.6910 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Warn] => logfile
+2025-07-13 15:24:52.6910 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Error] => logfile
+2025-07-13 15:24:52.6910 Debug Logger Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [Fatal] => logfile
+2025-07-13 15:24:52.6972 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:52.6972 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => logfile
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => logfile
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => logfile
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => logfile
+2025-07-13 15:24:52.6972 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => logfile
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => logfile
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => logfile
+2025-07-13 15:24:52.6972 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => logfile
+2025-07-13 15:24:52.7336 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Info] => logfile
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Warn] => logfile
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Error] => logfile
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder [Fatal] => logfile
+2025-07-13 15:24:52.7336 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Info] => logfile
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Warn] => logfile
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Error] => logfile
+2025-07-13 15:24:52.7336 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Fatal] => logfile
+2025-07-13 15:24:52.7460 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:54.5902 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Info] => logfile
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Warn] => logfile
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Error] => logfile
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Fatal] => logfile
+2025-07-13 15:24:54.5902 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Info] => logfile
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Warn] => logfile
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Error] => logfile
+2025-07-13 15:24:54.5902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Fatal] => logfile
+2025-07-13 15:24:54.6048 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:54.6362 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:54.6362 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:24:54.6362 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:14.1453 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:14.1630 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:14.1630 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:16.4534 Debug Targets configured when LogLevel >= Info for Logger: System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Info] => logfile
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Warn] => logfile
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Error] => logfile
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.LogicalHandler [Fatal] => logfile
+2025-07-13 15:25:16.4534 Debug Targets configured when LogLevel >= Info for Logger: System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Info] => logfile
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Warn] => logfile
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Error] => logfile
+2025-07-13 15:25:16.4534 Debug Logger System.Net.Http.HttpClient.IIdentityAuthClient.ClientHandler [Fatal] => logfile
+2025-07-13 15:25:16.4589 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Infrastructure.Repositories.IdentityAuthClient
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Info] => logfile
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Warn] => logfile
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Error] => logfile
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Infrastructure.Repositories.IdentityAuthClient [Fatal] => logfile
+2025-07-13 15:25:16.4589 Debug Targets configured when LogLevel >= Info for Logger: EquadisRJP.Application.Handlers.CreateRetailerCommandHandler
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Info] => logfile
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Warn] => logfile
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Error] => logfile
+2025-07-13 15:25:16.4589 Debug Logger EquadisRJP.Application.Handlers.CreateRetailerCommandHandler [Fatal] => logfile
+2025-07-13 15:25:23.7063 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:24.0461 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:24.0461 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:27.2687 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:27.2714 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:31.8441 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:38.9047 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:39.4013 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2025-07-13 15:25:39.4013 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Info] => logfile
+2025-07-13 15:25:39.4013 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Warn] => logfile
+2025-07-13 15:25:39.4013 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Error] => logfile
+2025-07-13 15:25:39.4013 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Fatal] => logfile
+2025-07-13 15:25:39.4569 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Info] => logfile
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Warn] => logfile
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Error] => logfile
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Fatal] => logfile
+2025-07-13 15:25:39.4569 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Query
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Query [Info] => logfile
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Query [Warn] => logfile
+2025-07-13 15:25:39.4569 Debug Logger Microsoft.EntityFrameworkCore.Query [Error] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Query [Fatal] => logfile
+2025-07-13 15:25:39.4589 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Info] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Warn] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Error] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Fatal] => logfile
+2025-07-13 15:25:39.4589 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Info] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Warn] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Error] => logfile
+2025-07-13 15:25:39.4589 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Fatal] => logfile
+2025-07-13 15:25:39.5408 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model
+2025-07-13 15:25:39.5408 Debug Logger Microsoft.EntityFrameworkCore.Model [Info] => logfile
+2025-07-13 15:25:39.5408 Debug Logger Microsoft.EntityFrameworkCore.Model [Warn] => logfile
+2025-07-13 15:25:39.5408 Debug Logger Microsoft.EntityFrameworkCore.Model [Error] => logfile
+2025-07-13 15:25:39.5408 Debug Logger Microsoft.EntityFrameworkCore.Model [Fatal] => logfile
+2025-07-13 15:25:39.5723 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2025-07-13 15:25:39.5723 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Info] => logfile
+2025-07-13 15:25:39.5723 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Warn] => logfile
+2025-07-13 15:25:39.5723 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Error] => logfile
+2025-07-13 15:25:39.5723 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Fatal] => logfile
+2025-07-13 15:25:40.2453 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Update
+2025-07-13 15:25:40.2453 Debug Logger Microsoft.EntityFrameworkCore.Update [Info] => logfile
+2025-07-13 15:25:40.2453 Debug Logger Microsoft.EntityFrameworkCore.Update [Warn] => logfile
+2025-07-13 15:25:40.2453 Debug Logger Microsoft.EntityFrameworkCore.Update [Error] => logfile
+2025-07-13 15:25:40.2453 Debug Logger Microsoft.EntityFrameworkCore.Update [Fatal] => logfile
+2025-07-13 15:25:42.1954 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:44.1362 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:44.1362 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:44.1362 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:25:44.1562 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:27:16.5028 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Http.DefaultHttpClientFactory
+2025-07-13 15:27:16.5028 Debug Logger Microsoft.Extensions.Http.DefaultHttpClientFactory [Info] => logfile
+2025-07-13 15:27:16.5028 Debug Logger Microsoft.Extensions.Http.DefaultHttpClientFactory [Warn] => logfile
+2025-07-13 15:27:16.5028 Debug Logger Microsoft.Extensions.Http.DefaultHttpClientFactory [Error] => logfile
+2025-07-13 15:27:16.5028 Debug Logger Microsoft.Extensions.Http.DefaultHttpClientFactory [Fatal] => logfile
+2025-07-13 15:29:20.3029 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:20.8350 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:20.8350 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:20.8350 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinder
+2025-07-13 15:29:20.8492 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinder [Info] => logfile
+2025-07-13 15:29:20.8492 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinder [Warn] => logfile
+2025-07-13 15:29:20.8492 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinder [Error] => logfile
+2025-07-13 15:29:20.8492 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinder [Fatal] => logfile
+2025-07-13 15:29:20.8492 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:30.0839 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:31.8157 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:34.9934 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:36.1203 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:36.1203 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:36.1203 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:29:36.1203 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:18.9432 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:18.9432 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:18.9432 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:26.3939 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:31.2535 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:33.7522 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:33.7522 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:30:33.7554 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:37.5329 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:37.5759 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:37.5759 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:39.9949 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:41.4911 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:41.4911 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:31:41.4911 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:33.5126 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:33.5126 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:34.0987 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder
+2025-07-13 15:32:34.0990 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder [Info] => logfile
+2025-07-13 15:32:34.0990 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder [Warn] => logfile
+2025-07-13 15:32:34.0990 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder [Error] => logfile
+2025-07-13 15:32:34.0990 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder [Fatal] => logfile
+2025-07-13 15:32:34.0990 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:35.2738 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:35.2738 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:35.2738 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:35.2738 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:57.2478 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:57.2478 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:32:57.2478 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:33:00.8554 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:33:05.6905 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:33:05.6905 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:33:05.6905 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False
+2025-07-13 15:33:05.6905 Trace FileTarget(Name=logfile): Opening D:\Development\GitHub\EquadisRJP\Services\EquadisRJP.Service\bin\Debug\net8.0\logs/2025-07-13.log with allowFileSharedWriting=False

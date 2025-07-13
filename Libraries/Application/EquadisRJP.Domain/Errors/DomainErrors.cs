@@ -31,6 +31,12 @@ namespace EquadisRJP.Domain.Errors
 
             public static readonly Error NotFound =
                 Error.NotFound("Partnership.NotFound", "Partnership not found.");
+
+            public static readonly Error InvalidPartyIds =
+            Error.Validation("Partnership.InvalidIds", "SupplierId and RetailerId must be greater than 0.");
+
+            public static readonly Error InvalidExpiry =
+                Error.Validation("Partnership.InvalidExpiry", "Expiry date must be after start date.");
         }
 
         public static class Supplier
