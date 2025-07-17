@@ -10,5 +10,7 @@ namespace EquadisRJP.Domain.Repositories
 
         Task<bool> HasActivePartnershipAsync(int retailerId, int supplierId);
 
+        Task<bool> RetailerExist(int retailerId);
+
     }
 }

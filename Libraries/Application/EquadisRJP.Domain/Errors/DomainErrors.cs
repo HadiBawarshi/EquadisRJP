@@ -52,6 +52,11 @@ namespace EquadisRJP.Domain.Errors
             public static Error CreationFailed => Error.Failure(
                 "Retailer.CreationFailed",
                 "Failed to create the retailer.");
+
+            public static readonly Error NotFound = new(
+               "Retailer.NotFound",
+               "Retailer not found",
+               ErrorType.NotFound);
         }
 
 

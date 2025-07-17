@@ -37,5 +37,14 @@ namespace EquadisRJP.Infrastructure.Repositories
                 p.StatusId == (int)Partnership.PartnershipStatus.Active &&
                 (!p.ExpiryDate.HasValue || p.ExpiryDate > DateTime.UtcNow));
         }
+
+
+
+        public async Task<bool> RetailerExist(int retailerId)
+        {
+            return await _dbContext.Retailers.AnyAsync(p =>
+                p.Id == retailerId);
+        }
+
     }
 }
