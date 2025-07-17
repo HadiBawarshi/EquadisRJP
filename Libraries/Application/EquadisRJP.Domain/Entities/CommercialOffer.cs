@@ -46,14 +46,14 @@ public partial class CommercialOffer : EntityBase
     public static CommercialOffer Create(string? title, DateTime? validFrom, DateTime? validTo, int? discount, int supplierId)
     {
 
-        if (validFrom >= validTo)
-            throw new ArgumentException("ValidFrom must be earlier than ValidTo.");
+        //if (validFrom >= validTo)
+        //    throw new ArgumentException("ValidFrom must be earlier than ValidTo.");
 
-        if (discount <= 0 || discount > 100)
-            throw new ArgumentException("Discount must be between 1 and 100.");
+        //if (discount <= 0 || discount > 100)
+        //    throw new ArgumentException("Discount must be between 1 and 100.");
 
-        if (supplierId <= 0)
-            throw new ArgumentException("SupplierId must be a positive value.");
+        //if (supplierId <= 0)
+        //    throw new ArgumentException("SupplierId must be a positive value.");
 
 
         return new(title, validFrom, validTo, discount, supplierId);
@@ -63,11 +63,11 @@ public partial class CommercialOffer : EntityBase
 
     public void Update(string? title, DateTime from, DateTime to, int discount)
     {
-        if (from >= to)
-            throw new ArgumentException("ValidFrom must be earlier than ValidTo.");
+        //if (from >= to)
+        //    throw new ArgumentException("ValidFrom must be earlier than ValidTo.");
 
-        if (discount <= 0 || discount > 100)
-            throw new ArgumentException("discount must be between 1 and 100.");
+        //if (discount <= 0 || discount > 100)
+        //    throw new ArgumentException("discount must be between 1 and 100.");
 
 
         Title = title ?? Title;

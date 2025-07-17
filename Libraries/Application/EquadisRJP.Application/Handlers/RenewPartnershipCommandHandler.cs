@@ -31,14 +31,11 @@ namespace EquadisRJP.Application.Handlers
                 return Result.Failure(DomainErrors.Partnership.NotFound);
             if (partnership.SupplierId != rq.SupplierId)
                 return Result.Failure(DomainErrors.Partnership.NotFound);
-            try
-            {
-                partnership.Renew(rq.NewExpiryDate);
-            }
-            catch (InvalidOperationException)
-            {
-                return Result.Failure(DomainErrors.Partnership.NotExpired);
-            }
+
+            Result renewResult = partnership.Renew(rq.NewExpiryDate);
+            if (renewResult.IsFailure)
+                return renewResult;
+
             PartnershipAuditDto auditDto = new PartnershipAuditDto(rq.SupplierId, partnership.RetailerId, (int)PartnershipStatus.Expired, (int)PartnershipStatus.Active, DateTime.UtcNow);
 
             await _auditLogger.LogAsync(

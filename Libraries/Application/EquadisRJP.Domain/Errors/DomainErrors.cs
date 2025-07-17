@@ -31,6 +31,12 @@ namespace EquadisRJP.Domain.Errors
 
             public static readonly Error NotFound =
                 Error.NotFound("Partnership.NotFound", "Partnership not found.");
+
+            public static readonly Error InvalidPartyIds =
+            Error.Validation("Partnership.InvalidIds", "SupplierId and RetailerId must be greater than 0.");
+
+            public static readonly Error InvalidExpiry =
+                Error.Validation("Partnership.InvalidExpiry", "Expiry date must be after start date.");
         }
 
         public static class Supplier
@@ -64,6 +70,18 @@ namespace EquadisRJP.Domain.Errors
                 "Offer.InvalidDiscountValue",
                 "Discount value must be between 0 and 100",
                 ErrorType.Validation);
+
+
+            public static readonly Error InvalidDateRange =
+    Error.Validation("Offer.InvalidDates", "ValidFrom must be earlier than ValidTo.");
+
+            public static readonly Error InvalidDiscount =
+                Error.Validation("Offer.InvalidDiscount", "Discount must be between 1 and 100.");
+
+            public static readonly Error InvalidSupplier =
+                Error.Validation("Offer.InvalidSupplier", "SupplierId must be a positive value.");
+
+
         }
 
 

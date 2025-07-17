@@ -32,6 +32,14 @@ namespace EquadisRJP.IdentityAuth.Services
         public async Task<TokenResponseDto> GenerateTokenAsync(TokenRequestDto dto)
         {
             var client = ValidateClient(dto);
+
+            if (client == null)
+                return new TokenResponseDto
+                {
+                    Success = false,
+                    Message = "Invalid client credentials or grant type"
+                };
+
             var claims = new List<Claim>
                         {
                             new Claim(IdentityAuthConstants.ClaimClientId, dto.ClientId),
@@ -41,6 +49,14 @@ namespace EquadisRJP.IdentityAuth.Services
             if (dto.GrantType == IdentityAuthConstants.PasswordGrantType)
             {
                 var user = await ValidateUserAsync(dto.Username, dto.Password);
+
+                if (user == null)
+                    return new TokenResponseDto
+                    {
+                        Success = false,
+                        Message = "Invalid username or password"
+                    };
+
                 claims.AddRange(await BuildUserClaimsAsync(user));
             }
 
@@ -49,37 +65,48 @@ namespace EquadisRJP.IdentityAuth.Services
             return new TokenResponseDto
             {
                 AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
-                ExpiresIn = (int)(token.ValidTo - DateTime.UtcNow).TotalSeconds
+                ExpiresIn = (int)(token.ValidTo - DateTime.UtcNow).TotalSeconds,
+                Success = true,
+                Message = string.Empty,
             };
         }
 
         public async Task<RegisterResponseDto> RegisterUserAsync(RegisterUserDto dto)
         {
+
             if (string.IsNullOrEmpty(dto.Role))
-                throw new ApplicationException("Role is required");
+                return new RegisterResponseDto(false, string.Empty, "Role is required");
+
+            //throw new ApplicationException("Role is required");
 
 
 
 
             if (!await _roleManager.RoleExistsAsync(dto.Role))
-                throw new ApplicationException("UnExpected role");
+                return new RegisterResponseDto(false, string.Empty, $"Unexpected role: {dto.Role}");
+
+            //throw new ApplicationException("UnExpected role");
 
             var user = new ApplicationUser { UserName = dto.Username, Email = dto.Email, PhoneNumber = dto.PhoneNumber, Name = dto.Name };
             var result = await _userManager.CreateAsync(user, dto.Password);
 
             if (!result.Succeeded)
-                throw new ApplicationException(string.Join("; ", result.Errors.Select(e => e.Description)));
+            {
+                var message = string.Join("; ", result.Errors.Select(e => e.Description));
+                return new RegisterResponseDto(false, string.Empty, message);
+            }
+            //throw new ApplicationException(string.Join("; ", result.Errors.Select(e => e.Description)));
 
             await _userManager.AddToRoleAsync(user, dto.Role);
 
-            return new RegisterResponseDto(true, user.Id);
+            return new RegisterResponseDto(true, user.Id, "User created successfully");
         }
 
 
         #region Private Methods
 
 
-        private AuthClientModel ValidateClient(TokenRequestDto dto)
+        private AuthClientModel? ValidateClient(TokenRequestDto dto)
         {
             var client = _clients.FirstOrDefault(c =>
                 c.ClientId == dto.ClientId &&
@@ -87,16 +114,19 @@ namespace EquadisRJP.IdentityAuth.Services
                 c.AllowedGrantTypes.Contains(dto.GrantType));
 
             if (client == null)
-                throw new UnauthorizedAccessException("Invalid client credentials or grant type");
+                //throw new UnauthorizedAccessException("Invalid client credentials or grant type");
+                return null;
 
             return client;
         }
-        private async Task<ApplicationUser> ValidateUserAsync(string username, string password)
+        private async Task<ApplicationUser?> ValidateUserAsync(string username, string password)
         {
             var user = await _userManager.FindByNameAsync(username);
 
             if (user == null || !await _userManager.CheckPasswordAsync(user, password))
-                throw new UnauthorizedAccessException("Invalid username or password");
+                //throw new UnauthorizedAccessException("Invalid username or password");
+                return null;
+
 
             return user;
         }

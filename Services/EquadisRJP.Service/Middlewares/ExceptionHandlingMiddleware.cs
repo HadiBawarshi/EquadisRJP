@@ -49,12 +49,20 @@ namespace EquadisRJP.Service.Middlewares
                 PartnershipExpiredException ex =>
                     Error.Conflict(DomainErrors.Partnership.PartnershipExpired),
 
-                UnauthorizedAccessException ex =>
+                UnauthorizedAccessException unauthorizedAccessException =>
                     Error.Validation(
                         "UnauthorizedAccess",
                         "Invalid input"),
 
+                ArgumentException argumentException =>
+                    Error.Validation(
+                        "ArgumentException",
+                        argumentException.Message),
 
+                InvalidOperationException invalidOperationException =>
+                    Error.Validation(
+                        "InvalidOperation",
+                        invalidOperationException.Message),
 
                 _ =>
                     Error.Problem(DomainErrors.ServerError.InternalServerError)

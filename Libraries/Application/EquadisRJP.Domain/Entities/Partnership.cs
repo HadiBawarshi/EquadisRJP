@@ -1,4 +1,5 @@
-﻿using EquadisRJP.Domain.DomainExceptions;
+﻿using EquadisRJP.Domain.Errors;
+using EquadisRJP.Domain.Primitives;
 
 namespace EquadisRJP.Domain.Entities;
 
@@ -50,12 +51,12 @@ public partial class Partnership : EntityBase
 
     public static Partnership Start(int supplierId, int retailerId, DateTime? expiryDate)
     {
-        if (supplierId <= 0 || retailerId <= 0)
-            throw new ArgumentException("Supplier and Retailer IDs must be valid.");
-        var now = DateTime.UtcNow;
+        //if (supplierId <= 0 || retailerId <= 0)
+        //    throw new ArgumentException("Supplier and Retailer IDs must be valid.");
+        //var now = DateTime.UtcNow;
 
-        if (expiryDate.HasValue && expiryDate <= now)
-            throw new ArgumentException("Expiry date must be after start date.");
+        //if (expiryDate.HasValue && expiryDate <= now)
+        //    throw new ArgumentException("Expiry date must be after start date.");
 
         return new Partnership(supplierId, retailerId, expiryDate);
     }
@@ -67,17 +68,22 @@ public partial class Partnership : EntityBase
     }
 
     // Business Rule: Renew
-    public void Renew(DateTime newExpiryDate)
+    public Result Renew(DateTime newExpiryDate)
     {
         if (StatusId != (int)PartnershipStatus.Expired)
-            throw new PartnershipExpiredException("Only expired partnerships can be renewed.");
+            //throw new PartnershipExpiredException("Only expired partnerships can be renewed.");
+            return Result.Failure(DomainErrors.Partnership.NotExpired);
 
         if (newExpiryDate <= DateTime.UtcNow)
-            throw new ArgumentException("New expiry date must be in the future.");
+            //throw new ArgumentException("New expiry date must be in the future.");
+            return Result.Failure(DomainErrors.Partnership.InvalidExpiry);
 
         ExpiryDate = newExpiryDate;
         StatusId = (int)PartnershipStatus.Active;
         ModifiedDate = DateTime.UtcNow;
+
+        return Result.Success();
+
     }
 
     public bool IsActive() => StatusId == (int)PartnershipStatus.Active &&
